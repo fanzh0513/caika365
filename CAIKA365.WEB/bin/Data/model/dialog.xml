@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="XiTongCS" msprop:DAO="AosuApp.AosuData.DictSet" msprop:CMDSELECT="Select XiTongCS.MCCanShu   ,XiTongCS.CanShuZhi   From XiTongCS" msprop:DAOM="AosuApp.Core.dll">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="MCCanShu" msdata:Caption="参数名称" type="xs:string" />
+                <xs:element name="CanShuZhi" msdata:Caption="数据连接参数" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//XiTongCS" />
+        <xs:field xpath="MCCanShu" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <XiTongCS>
+    <MCCanShu>Title</MCCanShu>
+    <CanShuZhi>彩咖网_足球彩票_足彩预测_足球比分</CanShuZhi>
+  </XiTongCS>
+  <XiTongCS>
+    <MCCanShu>Description</MCCanShu>
+    <CanShuZhi>彩咖网竞彩足球为您提供足彩混合投注、胜平负投注、比分投注、总进球投注、猜一场，彩咖网打造返奖最快的竞彩平台，竞彩投注就在彩咖网！</CanShuZhi>
+  </XiTongCS>
+  <XiTongCS>
+    <MCCanShu>Keywords</MCCanShu>
+    <CanShuZhi>彩咖网 彩票 足彩 足球彩票 足彩预测 足球比分</CanShuZhi>
+  </XiTongCS>
+  <XiTongCS>
+    <MCCanShu>ResConfigFile</MCCanShu>
+    <CanShuZhi>config\dialog.res</CanShuZhi>
+  </XiTongCS>
+</NewDataSet>

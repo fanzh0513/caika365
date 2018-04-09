@@ -1,0 +1,43 @@
+.f-bgcolor {
+    background-color: #ca5252;
+}
+
+.btncolor {
+    background: #ca5252;
+    color: #fff;
+}
+
+.btncolor:hover {
+    background: #e66363;
+    color: #edc8c8;
+}
+
+.btncolor:active {
+    background: #b65454;
+    color: #edc8c8;
+}
+
+.btndisabled {
+    background: #da8686;
+    color: #edc8c8;
+    cursor: default;
+}
+
+.btndisabled:hover {
+    background: #da8686;
+    color: #edc8c8;
+}
+
+.btndisabled:active {
+    background: #da8686;
+    color: #edc8c8;
+}
+
+body .m-header {
+    padding: 25px 0;
+}
+
+body .m-header .headimg {
+    background: url(../imgs/pp/logo-for-urs_a8d4969.png) no-repeat 50% 0;
+    height: 48px;
+}

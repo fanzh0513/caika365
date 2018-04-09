@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D99BEA7A-1F78-4C94-ADBA-DDC806086D57}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CAIKA365.Enhance</RootNamespace>
+    <AssemblyName>CAIKA365.Enhance</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AosuApp.Core, Version=4.617.1123.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\AosuStudio\AosuFramework\AosuApp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="AosuApp.Win, Version=1.16.2.301, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\AosuStudio\AosuFramework\AosuApp.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assistent\AgentAssistent.cs" />
+    <Compile Include="Assistent\CategoryAssistent.cs" />
+    <Compile Include="Assistent\JournalAssistent.cs" />
+    <Compile Include="Assistent\MemberAssistent.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\FChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Account\FChangePassword.Designer.cs">
+      <DependentUpon>FChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\FCreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Account\FCreateAccount.Designer.cs">
+      <DependentUpon>FCreateAccount.cs</DependentUpon>
+    </Compile>
+    <None Include="Views\Agent\FAgent.cs">
+      <SubType>Form</SubType>
+    </None>
+    <None Include="Views\Agent\FAgent.Designer.cs">
+      <DependentUpon>FAgent.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\API.CP.BASE\API.CP.BASE.csproj">
+      <Project>{6cb329cb-f5f1-4a6a-834c-d5b38a850e3c}</Project>
+      <Name>API.CP.BASE</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Account\FChangePassword.resx">
+      <DependentUpon>FChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Account\FCreateAccount.resx">
+      <DependentUpon>FCreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Agent\FAgent.resx">
+      <DependentUpon>FAgent.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assignto_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assignto_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bofileattachment_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bofileattachment_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bouser_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bouser_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bugreport_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bugreport_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chartsshowlegend_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fittopage_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fullextent_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fullextent_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keyboard_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\language_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\language_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meeting_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meeting_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newgroup_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notes_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palette_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palette_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paneloff_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paneloff_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pivot_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\task_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\task_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wizard_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wizard_32x32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,7 @@
+E:\workspace\CAIKA365\CAIKA365\CAIKA365.Enhance\obj\Debug\CAIKA365.Enhance.csprojResolveAssemblyReference.cache
+E:\workspace\CAIKA365\CAIKA365\CAIKA365.Enhance\obj\Debug\CAIKA365.Enhance.Properties.Resources.resources
+E:\workspace\CAIKA365\CAIKA365\CAIKA365.Enhance\obj\Debug\CAIKA365.Enhance.Views.FChangePassword.resources
+E:\workspace\CAIKA365\CAIKA365\CAIKA365.Enhance\obj\Debug\CAIKA365.Enhance.Views.FCreateAccount.resources
+E:\workspace\CAIKA365\CAIKA365\CAIKA365.Enhance\obj\Debug\CAIKA365.Enhance.Views.FAgent.resources
+E:\workspace\CAIKA365\CAIKA365\CAIKA365.Enhance\obj\Debug\CAIKA365.Enhance.csproj.GenerateResource.cache
+E:\workspace\CAIKA365\CAIKA365\CAIKA365.Enhance\obj\Debug\CAIKA365.Enhance.dll.licenses

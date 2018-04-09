@@ -1,0 +1,298 @@
+﻿@using AosuApp.AosuFramework;
+@using System.Data;
+@using CAIKA365.WEB.ClassLibs;
+@model CAIKA365.WEB.ClassLibs.PageModel
+<div class="order-bd">
+    <div class="utit clearfix">
+        <ul class="tit-tab">
+            <li class="active" rel="#bind"><a href="javascript:void(0);">绑定银行卡</a></li>
+            @{
+                DictSetUtil ds_bank = new DictSetUtil(Model.Parameters.BankData);
+                if (Model.Parameters.HaveBank)
+                {
+            <li rel="#change"><a href="javascript:void(0);">修改银行卡</a></li>
+                }
+            }
+        </ul>
+    </div>
+    <div class="order-form" id="bind">
+        @{
+            if (Model.Parameters.HaveBank)
+            {
+                string cardnum = ds_bank.GetValue("cardnum");
+                try
+                {
+                    cardnum = cardnum.Substring(0, 3) + "".PadLeft(cardnum.Length - 7, '*') + cardnum.Substring(cardnum.Length - 4);
+                }
+                catch (Exception)
+                {
+                }
+        <div class="profile first pro-completed">
+            <p class="text-center fsz16 green" style="margin-left:-88px;"><i class="ico ico-succ"></i><strong> 您已经绑定银行卡，信息如下</strong></p>
+            <ul class="profile-form">
+                <li>
+                    <span class="v">开户姓名：</span>
+                    <span class="k">@ds_bank.GetValue("realname")</span>
+                </li>
+                <li>
+                    <span class="v">开户银行：</span>
+                    <span class="k">
+                        <span class="bank-name fsz14"><i class="bank-ico ico-@ds_bank.GetValue("bankno").ToLower()"></i>@ds_bank.GetValue("bankname")</span>
+                        <span class="card-number fsz14">@cardnum</span>
+                    </span>
+                </li>
+                <li>
+                    <span class="v">银行信息：</span>
+                    <span class="k">@ds_bank.GetValue("province_name") @ds_bank.GetValue("city_name") </span>
+                </li>
+            </ul>
+        </div>
+            }
+            else
+            {
+        <p class="top-tips"><i class="ico ico-info-s"></i>  您尚未绑定银行卡，绑定后就可以进行提款操作了，请认真填写！</p>
+        <div class="profile first ">
+            <ul class="profile-form">
+                <li>
+                    <span class="v">银行卡开户姓名：</span>
+                    <span class="k">
+                        <input type="text" class="text input-large" required="true" t-name="输入银行卡开户姓名" maxlength="20" autocomplete="off" tabindex="1" value="" id="realname"><em class="txt-t"></em>
+                        <p class="form-tips gray">银行卡开户人姓名必须和注册时填写的真实姓名一致，否则无法完成提款</p>
+                    </span>
+                </li>
+                <li>
+                    <span class="v">选择提款银行：</span>
+                    <span class="k">
+                        <div class="u-select" style="width:155px;z-index:15;">
+                            <span class="txt-box" tabindex="2"><span class="arrow-box"><i class="arrow"></i></span><em class="txt" id="bankname">请选择银行</em></span>
+                            <div class="list" style="width:442px;" rel="#bankno" tip="#bank_tips">
+                                <div class="back-list-con">
+                                    <div class="back-list">
+                                        <span class="bank-item" val="ICBC"><i class="bank-ico ico-01"></i> 工商银行</span>
+                                        <span class="bank-item" val="ABC"><i class="bank-ico ico-02"></i> 农业银行</span>
+                                        <span class="bank-item" val="CMB"><i class="bank-ico ico-08"></i> 招商银行</span>
+                                        <span class="bank-item" val="CCB"><i class="bank-ico ico-06"></i> 建设银行</span>
+                                        <span class="bank-item" val="BOC" zh="1"><i class="bank-ico ico-09"></i> 中国银行</span>
+                                    </div>
+                                </div>
+                                <div class="back-list-con">
+                                    <div class="back-list">
+                                        <span class="bank-item" val="BCOM"><i class="bank-ico ico-03"></i> 交通银行</span>
+                                        <span class="bank-item" val="PSBC" zh="1"><i class="bank-ico ico-04"></i> 邮政储蓄</span>
+                                        <span class="bank-item" val="CEB"><i class="bank-ico ico-10"></i> 光大银行</span>
+                                        <span class="bank-item" val="SPDB"><i class="bank-ico ico-15"></i> 浦发银行</span>
+                                        <span class="bank-item" val="GDB"><i class="bank-ico ico-13"></i> 广发银行</span>
+                                        <span class="bank-item" val="CMBC" zh="1"><i class="bank-ico ico-11"></i> 民生银行</span>
+                                        <span class="bank-item" val="CIB"><i class="bank-ico ico-16"></i> 兴业银行</span>
+                                        <span class="bank-item" val="CITIC"><i class="bank-ico ico-07"></i> 中信银行</span>
+                                        <span class="bank-item bank-item-exp" style="width:103px;" val="BJRCB"><i class="bank-ico ico-21"></i> 北京农商银行</span>
+                                    </div>
+                                </div>
+                                <div class="back-list-con back-list-last">
+                                    <div class="back-list">
+                                        <span class="bank-item" val="HXB" zh="1"><i class="bank-ico ico-05"></i> 华夏银行</span>
+                                        <span class="bank-item" val="PAB" zh="1"><i class="bank-ico ico-14"></i> 平安银行</span>
+                                        <span class="bank-item" val="BOB" zh="1"><i class="bank-ico ico-19"></i> 北京银行</span>
+                                        <span class="bank-item" val="NBCB" zh="1"><i class="bank-ico ico-17"></i> 宁波银行</span>
+                                        <span class="bank-item" val="NJCB" zh="1"><i class="bank-ico ico-22"></i> 南京银行</span>
+                                        <span class="bank-item" val="CBHB" zh="1"><i class="bank-ico ico-23"></i> 渤海银行</span>
+                                        <span class="bank-item" val="BEA" zh="1"><i class="bank-ico ico-12"></i> 东亚银行</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" value="" required="true" id="bankno" />
+                        </div>
+                        <em class="txt-t red f-dn" id="bank_tips"><i class="ico ico-error2 "></i>请选择提款银行</em>
+                        <div class="u-select-cont">
+                            <div class="u-select" style="width: 100px;" rel="#city-select">
+                                <span class="txt-box" tabindex="3"><span class="arrow-box"><i class="arrow"></i></span><em class="txt" id="province_name">请选择省</em></span>
+                                <ul class="list" style="width:98px;max-height: 200px;overflow: hidden;overflow-y: auto;" rel="#city_list" tip="#city_tips">
+                                    @{
+                                        if (typeof(DataTable).IsInstanceOfType(Model.Parameters.Provinces))
+                                        {
+                                            foreach (DataRow item in (Model.Parameters.Provinces as DataTable).Rows)
+                                            {
+                                                <li val="@item["ID"]">@item["NAME2"]</li>
+                                            }
+                                        }
+                                    }
+                                </ul>
+                                <input type="hidden" value="" id="city_list" />
+                            </div>
+                            <em style="margin:0 5px;">省(直辖市)</em>
+                            <div class="u-select" style="width:100px;" id="city-select">
+                                <span class="txt-box"><span class="arrow-box"><i class="arrow"></i></span><em class="txt" id="city_name">请选择</em></span>
+                                <ul class="list" style="width:98px;max-height: 200px;overflow: hidden;overflow-y: auto;" rel="#city" tip="#city_tips">
+                                    <li val="">请选择省</li>
+                                </ul>
+                                <input type="hidden" value="" id="city" />
+                            </div>
+                            <em style="margin:0 5px;">市(区、县)</em>
+                        </div>
+                        <em class="txt-t red f-dn" id="city_tips"><i class="ico ico-error2 "></i>请选择城市</em>
+                    </span>
+                </li>
+                <li>
+                    <span class="v">支行名称：</span>
+                    <span class="k">
+                        <input type="text" class="text input-large" autocomplete="off" tabindex="4" maxlength="30" value="" id="bankzh">
+                        <p class="form-tips gray">请填写支行名称。例：中国银行北京朝阳支行。查询支行请拨打银行卡背面客服电话确认</p>
+                    </span>
+                </li>
+                <li>
+                    <span class="v">提款银行卡号<em class="f-red1">(暂不支持信用卡)</em>：</span>
+                    <span class="k">
+                        <input type="text" class="text input-large" required="true" t-name="输入提款银行卡号" tabindex="5" autocomplete="off" maxlength="30" value="" id="cardnum"><em class="txt-t"></em>
+                        <p class="form-tips gray">该银行卡必须和注册时填写的真实姓名一致，否则无法完成提款</p>
+                    </span>
+                </li>
+                <li>
+                    <span class="v">再输入一次提款银行卡号：</span>
+                    <span class="k">
+                        <input type="text" class="text input-large" required="true" t-name="再输入一次提款银行卡号" autocomplete="off" tabindex="6" maxlength="30" value="" rel="#cardnum"><em class="txt-t"></em>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="profile">
+            <ul class="profile-form">
+                <li>
+                    <span class="v" style="padding-top:36px;">支付密码：</span>
+                    <span class="k">
+                        <p class="pb10"><em class="f-red1">为保障您的账户资金安全，请输入彩咖网账户的支付密码（非银行卡密码）。</em></p>
+                        <input type="password" class="text input-large" autocomplete="off" tabindex="7" maxlength="16" value="" id="ppass" error="支付密码输入有误"><em class="txt-t"></em>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="btn profile-btn">
+            <span class="ubtn3" act="bind_card">立即绑定</span>
+        </div>
+            }
+        }
+    </div>
+    @{
+        if (Model.Parameters.HaveBank)
+        {
+            <div class="order-form f-dn" id="change">
+                <div class="profile first ">
+                    <ul class="profile-form">
+                        <li>
+                            <span class="v">银行卡开户姓名：</span>
+                            <span class="k">
+                                <em class="fsz14">@ds_bank.GetValue("realname")</em>
+                                <input type="hidden" class="text input-large" maxlength="28" required="true" autocomplete="off" tabindex="1" value="@ds_bank.GetValue("realname")" id="realname"> <em class="txt-t gray f-dn"> 请填写银行卡开户人真实姓名</em>
+                                <p class="form-tips gray f-dn">银行卡卡主姓名必须和注册时填写的真实姓名一致，否则无法完成提款</p>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="v">选择提款银行：</span>
+                            <span class="k">
+                                <div class="u-select" style="width:155px;z-index:15;">
+                                    <span class="txt-box" tabindex="2"><span class="arrow-box"><i class="arrow"></i></span><em class="txt" id="bankname"><i class="bank-ico ico-@ds_bank.GetValue("bankno").ToLower()"></i>@ds_bank.GetValue("bankname")</em></span>
+                                    <div class="list" style="width:442px;" rel="#bankno" tip="#bank_tips">
+                                        <div class="back-list-con">
+                                            <div class="back-list">
+                                                <span class="bank-item" val="ICBC"><i class="bank-ico ico-01"></i> 工商银行</span>
+                                                <span class="bank-item" val="ABC"><i class="bank-ico ico-02"></i> 农业银行</span>
+                                                <span class="bank-item" val="CMB"><i class="bank-ico ico-08"></i> 招商银行</span>
+                                                <span class="bank-item" val="CCB"><i class="bank-ico ico-06"></i> 建设银行</span>
+                                                <span class="bank-item" val="BOC" zh="1"><i class="bank-ico ico-09"></i> 中国银行</span>
+                                            </div>
+                                        </div>
+                                        <div class="back-list-con">
+                                            <div class="back-list">
+                                                <span class="bank-item" val="BCOM"><i class="bank-ico ico-03"></i> 交通银行</span>
+                                                <span class="bank-item" val="PSBC" zh="1"><i class="bank-ico ico-04"></i> 邮政储蓄</span>
+                                                <span class="bank-item" val="CEB"><i class="bank-ico ico-10"></i> 光大银行</span>
+                                                <span class="bank-item" val="SPDB"><i class="bank-ico ico-15"></i> 浦发银行</span>
+                                                <span class="bank-item" val="GDB"><i class="bank-ico ico-13"></i> 广发银行</span>
+                                                <span class="bank-item" val="CMBC" zh="1"><i class="bank-ico ico-11"></i> 民生银行</span>
+                                                <span class="bank-item" val="CIB"><i class="bank-ico ico-16"></i> 兴业银行</span>
+                                                <span class="bank-item" val="CITIC"><i class="bank-ico ico-07"></i> 中信银行</span>
+                                                <span class="bank-item bank-item-exp" style="width:103px;" val="BJRCB"><i class="bank-ico ico-21"></i> 北京农商银行</span>
+                                            </div>
+                                        </div>
+                                        <div class="back-list-con back-list-last">
+                                            <div class="back-list">
+                                                <span class="bank-item" val="HXB" zh="1"><i class="bank-ico ico-05"></i> 华夏银行</span>
+                                                <span class="bank-item" val="PAB" zh="1"><i class="bank-ico ico-14"></i> 平安银行</span>
+                                                <span class="bank-item" val="BOB" zh="1"><i class="bank-ico ico-19"></i> 北京银行</span>
+                                                <span class="bank-item" val="NBCB" zh="1"><i class="bank-ico ico-17"></i> 宁波银行</span>
+                                                <span class="bank-item" val="NJCB" zh="1"><i class="bank-ico ico-22"></i> 南京银行</span>
+                                                <span class="bank-item" val="CBHB" zh="1"><i class="bank-ico ico-23"></i> 渤海银行</span>
+                                                <span class="bank-item" val="BEA" zh="1"><i class="bank-ico ico-12"></i> 东亚银行</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" value="@ds_bank.GetValue("bankno")" required="true" id="bankno" />
+                                </div>
+                                <em class="txt-t red f-dn" id="bank_tips"><i class="ico ico-error2 "></i>请选择提款银行</em>
+                                <div class="u-select-cont">
+                                    <div class="u-select" style="width: 100px;" rel="#city-select">
+                                        <span class="txt-box" tabindex="3"><span class="arrow-box"><i class="arrow"></i></span><em class="txt" id="province_name">@ds_bank.GetValue("province_name")</em></span>
+                                        <ul id="Provinces" class="list" style="width:98px;max-height: 200px;overflow: hidden;overflow-y: auto;" rel="#city_list" tip="#city_tips"></ul>
+                                        <input type="hidden" value="@ds_bank.GetValue("province")" id="city_list" />
+                                    </div>
+                                    <em style="margin:0 5px;">省(直辖市)</em>
+                                    <div class="u-select" style="width:100px;" id="city-select">
+                                        <span class="txt-box"><span class="arrow-box"><i class="arrow"></i></span><em class="txt" id="city_name">@ds_bank.GetValue("city_name")</em></span>
+                                        <ul id="Cities" class="list" style="width:98px;max-height: 200px;overflow: hidden;overflow-y: auto;" rel="#city" tip="#city_tips">
+                                            <li val="">请选择省</li>
+                                        </ul>
+                                        <input type="hidden" value="@ds_bank.GetValue("city")" id="city" />
+                                    </div>
+                                    <em style="margin:0 5px;">市(区、县)</em>
+                                </div>
+                                <em class="txt-t red f-dn" id="city_tips"><i class="ico ico-error2 "></i>请选择城市</em>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="v">支行名称：</span>
+                            <span class="k">
+                                <input type="text" class="text input-large" autocomplete="off" tabindex="4" maxlength="30" value="" id="bankzh">
+                                <p class="form-tips gray">请填写支行名称。例：中国银行北京朝阳支行。查询支行请拨打银行卡背面客服电话确认</p>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="v">提款银行卡号<em class="f-red1">(暂不支持信用卡)</em>：</span>
+                            <span class="k">
+                                <input type="text" class="text input-large" required="true" t-name="输入提款银行卡号" tabindex="5" autocomplete="off" maxlength="30" value="" id="cardnum"><em class="txt-t"></em>
+                                <p class="form-tips gray">该银行卡必须和注册时填写的真实姓名一致，否则无法完成提款</p>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="v">再输入一次提款银行卡号：</span>
+                            <span class="k">
+                                <input type="text" class="text input-large" required="true" t-name="再输入一次提款银行卡号" autocomplete="off" tabindex="6" maxlength="30" value="" rel="#cardnum"><em class="txt-t"></em>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="profile">
+                    <ul class="profile-form">
+                        <li>
+                            <span class="v" style="padding-top:36px;">支付密码：</span>
+                            <span class="k">
+                                <p class="pb10"><em class="f-red1">为保障您的账户资金安全，请输入彩咖网账户支付密码（非银行卡密码）</em></p>
+                                <input type="password" class="text input-large" autocomplete="off" tabindex="7" maxlength="16" value="" id="ppass" error="支付密码输入有误"><em class="txt-t"></em>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn profile-btn">
+                    <span class="ubtn3" act="bind_card">确认修改</span>
+                </div>
+            </div>
+        }
+    }
+    <div class="line"></div>
+</div>
+<div class="data-info">
+    <h3>绑定银行卡-注意事项：</h3>
+    <p>您所绑定的银行卡必须为<em class="red">储蓄卡</em>，信用卡将无法申请提款；</p>
+    <p>您所绑定的银行卡开户人姓名</em>必须与网站<em class="red">注册时填写的真实姓名</em>保持一致，否则将无法申请提款；</p>
+    <p>如需填写开户行名称，请务必核对无误后填写（可以拨打银行电话查询到），否则可能导致提款失败；</p>
+    <p>建议优先绑定<em class="red">工/农/建/招/中5家银行</em>，提款到账速度较快，可在1个工作日内到账（最快15分钟）；</p>
+    <p>提款免收手续费（银行所收手续费由彩咖网全额承担）；</p>
+</div>

@@ -1,0 +1,61 @@
+﻿@{
+    Layout = "~/Views/Shared/_Passport.cshtml";
+}
+<script>Core && Core.setPage && Core.setPage("login");</script>
+<div class="m-cnt">
+    <form id="login-form">
+        <div class="m-container">
+            <div class="inputbox" id="account-box">
+                <div class="u-logo"><div class="u-logo-img1"></div></div>
+                <div class="u-input box">
+                    <input id="account" tabindex="1" class="j-inputtext" min="4" maxlength="30" spellcheck="false" type="text" placeholder="用户名/手机号/邮箱地址" autocomplete="off" data-required="true">
+                </div>
+                <div class="u-tip" style="display: none;">
+                    <div class="u-success u-clear"></div>
+                </div>
+            </div>
+            <div class="fur-change-email"></div>
+            <div class="inputbox">
+                <div class="u-logo">
+                    <div class="u-logo-img2"></div>
+                </div>
+                <div class="u-input box">
+                    <input id="password" tabindex="2" class="j-inputtext dlpwd" spellcheck="false" type="password" min="6" maxlength="16" placeholder="密码" autocomplete="new-password" data-required="true">
+                </div>
+                <div class="u-tip" style="display: none;">
+                    <div class="u-success u-clear"></div>
+                </div>
+            </div>
+            <div class="fur-change-email"></div>
+            <div>
+                <div class="inputbox vcode">
+                    <div class="u-logo">
+                        <div class="u-logo-img3"></div>
+                    </div>
+                    <div class="u-input box">
+                        <input id="code" tabindex="2" class="j-inputtext" spellcheck="false" maxlength="4" placeholder="验证码" data-required="true">
+                    </div>
+                </div>
+                <div class="vcodeimg">
+                    <img id="valiCode" style="cursor: pointer;" class="col-md-2 control-label" src="@Href("~/member/getvImage")" alt="验证码" />
+                </div>
+            </div>
+            <div class="m-nerror f-dn" id="nerror">
+                <div class="ferrortail"></div>
+                <div class="ferrorhead"></div>
+            </div>
+            <div class="f-cb loginbox">
+                <a tabindex="8" class="u-loginbtn btncolor tabfocus" id="dologin" data-action="dologin">登　录</a>
+            </div>
+            <div class="m-unlogin">
+                <div class="b-unlogn j-unlogn">
+                    <span class="u-checkbox tabfocus u-checkbox-select">
+                        <input name="un-login" class="un-login" id="un-login" type="checkbox">
+                    </span>
+                    <label for="un-login">十天内免登录</label>
+                </div>
+                <a class="forgetpwd j-redirect" href="/member/forget" target="_blank">忘记密码？</a>
+            </div>
+        </div>
+    </form>
+</div>

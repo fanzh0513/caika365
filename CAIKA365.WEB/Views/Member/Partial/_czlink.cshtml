@@ -1,0 +1,121 @@
+﻿@using System.Data;
+@model CAIKA365.WEB.ClassLibs.PageModel
+<div class="order-bd">
+    <div class="utit clearfix">
+        <ul class="tit-tab">
+            <li class="active" rel="#qrway" val="qrway"><a href="javascript:void(0);">二维码支付</a></li>
+            <li rel="#fastway" val="fastway"><a href="javascript:void(0);">快捷充值</a></li>
+            <li rel="#netbank" val="netbank"><a href="javascript:void(0);">网银储蓄卡</a></li>
+        </ul>
+        <span class="fr">
+            <em class="c9">|</em>
+            <span class="hb-item"><a href="@Href("~/member/usercenter/zhmx?t=deposit&m=month6")" class="lnk">近6个月充值记录</a></span>
+        </span>
+    </div>
+    <div class="order-form">
+        <div class="recharge-num" id="amount_box" style="padding-top: 26px;">
+            <div class="clearfix ">
+                <span class="v">充值金额：</span>
+                <div class="k">
+                    <form id="pro_chongzhi_post" name="pro_chongzhi_post" method="post" action="@Href("~/member/preDeposit")">
+                        <input type="hidden" name="username" id="username" value="@Model.Parameters.Account" />
+                        <input type="hidden" name="channel" id="channel" value="qrway" />
+                        <input type="hidden" name="payid" id="payid" />
+                        <input type="hidden" name="t_id" id="t_id" />
+                        <input type="text" class="text input-mini" value="100.00" autocomplete="off" style="height: 22px; width: 105px; font-size: 16px; text-align: left;" max="999999" maxlength="10" id="amount" name="amount"> 元
+                        （即时到账，彩咖网充值免收手续费，最小充值金额10元）
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="recharge-bank clearfix" id="qrway">
+            <span class="v">扫码方式：</span>
+            <div class="k">
+                <ul class="bank-list">
+                    @{
+                        if (typeof(DataTable).IsInstanceOfType(Model.Parameters.PayList))
+                        {
+                            foreach (var item in ((DataTable)Model.Parameters.PayList).Select("PAYMETHOD='qrway'", "SEQNO"))
+                            {
+                                <li val="@item["PAYID"]"><span class="@item["CSSNAME"]"></span><i class="corner"></i></li>
+                            }
+                        }
+                    }
+                </ul>
+                <div class="btn">
+                    <span class="ubtn3" act="getQR">扫一扫充值</span>
+                </div>
+            </div>
+        </div>
+        <div class="recharge-bank clearfix f-dn" id="fastway">
+            <span class="v">快捷充值：</span>
+            <div class="k">
+                <ul class="bank-list">
+                    @{
+                        if (typeof(DataTable).IsInstanceOfType(Model.Parameters.PayList))
+                        {
+                            foreach (var item in ((DataTable)Model.Parameters.PayList).Select("PAYMETHOD='fastway'", "SEQNO"))
+                            {
+                                <li val="@item["PAYID"]"><span class="@item["CSSNAME"]"></span><i class="corner"></i></li>
+                            }
+                        }
+                    }
+                </ul>
+                <p class="zhu">注：无需网银，通过银行卡（<span style="color:#c70000">借记卡、信用卡</span>）在线支付；<a href="#" class="lnk" id="upay_bank">查看支持银行</a></p>
+                <div class="btn">
+                    <span class="ubtn3" act="prepare_cz">进入充值通道</span>
+                </div>
+            </div>
+        </div>
+        <div class="recharge-bank clearfix f-dn" id="netbank">
+            <span class="v">选择银行：</span>
+            <div class="k">
+                <ul class="bank-list">
+                    @{
+                        if (typeof(DataTable).IsInstanceOfType(Model.Parameters.PayList))
+                        {
+                            foreach (var item in ((DataTable)Model.Parameters.PayList).Select("PAYMETHOD='netbank'", "SEQNO"))
+                            {
+                                <li val="@item["PAYID"]"><span class="@item["CSSNAME"]"></span><i class="corner"></i></li>
+                            }
+                        }
+                    }
+                </ul>
+                <div class="btn">
+                    <span class="ubtn3" act="prepare_cz">登录网上银行充值</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="data-info">
+        <h3>常见问题：</h3>
+        <p>1、什么是二维码支付？</p>
+        <p>用户通过手机客户端扫拍二维码，便可实现与彩咖网账户的支付结算。彩咖网根据二维码支付信息完成对彩咖网资金账号的充值。目前彩咖网已开通支付宝扫一扫、微信扫一扫、QQ钱包等主流二维码支付通道，资金秒到账。</p>
+        <br />
+        <p>2、什么是快捷支付？</p>
+        <p>
+            答：将彩咖网账户关联储蓄卡或者信用卡，每次付款时只需输入彩咖网的支付密码即可完成付款，并且需要校验储蓄卡或者信用卡的银行预留手机。<span class="f-red1">该支付方式不需要开通网银即可进行。</span>
+        </p>
+        <br />
+        <p>3、没有网上银行，怎么用银行卡充值？</p>
+        <p>答：储蓄卡用户，可以选择彩咖网"快捷支付"充值，一次完成开通即可不需要网银快速完成充值。</p>
+        <br />
+        <p>4、可以使用他人银行卡开通快捷支付么？</p>
+        <p> 答：不可以。为了您的账号和银行卡的安全，请使用本人银行卡开通快捷支付。</p>
+        <br />
+        <p>5、什么是银行预留手机？</p>
+        <p> 答：银行预留手机是您在办理银行业务时留下的手机号码，如果无法获取预留手机短信验证码请携带身份证及银行卡至银行网点柜台告知银行工作人员修改。</p>
+    </div>
+    <div class="qr-container f-dn">
+        <div class="qr-body">
+            <div class="qr-header">您要充值的账户是：<span class="f-red1"><strong></strong></span></div>
+            <div class="qr-content">
+                <img class="qr-img" />
+            </div>
+            <div class="qr-footer">
+                <span>请打开手机客户端扫描上面的图片继续支付</span>
+            </div>
+        </div>
+    </div>
+</div>

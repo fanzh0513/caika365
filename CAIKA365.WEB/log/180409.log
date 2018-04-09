@@ -1,0 +1,546 @@
+[18/04/09 11:08:14 043][INFO ][PID:8432]开始!
+[18/04/09 11:08:14 132][INFO ][PID:8432]启动路径：E:\workspace\CAIKA365\CAIKA365\CAIKA365.WEB\
+[18/04/09 11:08:14 154][INFO ][PID:8432]配置路径：E:\workspace\CAIKA365\CAIKA365\CAIKA365.WEB\/Data/AosuConfig.xml
+[18/04/09 11:08:14 207][TRACE][PID:8432]AosuApp.AosuFramework.AWSDataUtil:CLoadData
+[18/04/09 11:08:14 215][TRACE][PID:8432]AosuApp.AosuFramework.AWSDataUtil:CLoadData
+[18/04/09 11:08:14 572][TRACE][PID:8432]AosuApp.AosuFramework.AWSUtil:CServerState
+[18/04/09 11:08:14 839][TRACE][PID:8432]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:08:14 871][ERROR][PID:8432]AosuApp.Web.WSHandler.xml不存在!
+[18/04/09 11:08:13 884][INFO ][PID:8432]开始!
+[18/04/09 11:08:14 134][INFO ][PID:8432]启动路径：E:\workspace\CAIKA365\CAIKA365\CAIKA365.WEB\
+[18/04/09 11:08:14 154][INFO ][PID:8432]配置路径：E:\workspace\CAIKA365\CAIKA365\CAIKA365.WEB\/Data/AosuConfig.xml
+[18/04/09 11:08:14 572][TRACE][PID:8432]AosuApp.AosuFramework.AWSUtil:CServerState
+[18/04/09 11:08:14 838][TRACE][PID:8432]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:08:14 891][ERROR][PID:8432]AosuApp.Web.WSHandler.xml不存在!
+[18/04/09 11:08:15 397][TRACE][PID:8432]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:08:15 398][TRACE][PID:8432]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:08:32 701][TRACE][PID:8432]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:08:43 654][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:08:43 681][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:43 815][TRACE][PID:8432]AosuApp.AosuSSO.APassport:CSignOn
+[18/04/09 11:08:43 820][TRACE][PID:8432]AosuApp.AosuSSO.ADomain:CCheckLicense
+[18/04/09 11:08:43 824][TRACE][PID:8432]AosuApp.AosuSSO.ADomain:CGetADomainDS
+[18/04/09 11:08:43 828][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:08:43 830][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:43 871][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:08:43 873][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:43 935][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:08:43 936][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:43 964][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:43 986][TRACE][PID:8432]AosuApp.AosuSSO.APassport:CVerifyPasswrod
+[18/04/09 11:08:43 989][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:08:43 991][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:43 999][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CPersistent
+[18/04/09 11:08:44 009][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:44 066][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:08:44 068][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:44 078][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CPersistent
+[18/04/09 11:08:44 080][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:44 187][TRACE][PID:8432]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:08:44 310][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:08:44 312][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:44 319][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:08:44 320][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:45 991][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:08:45 993][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:46 007][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:08:46 009][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:46 038][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:08:46 039][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:46 049][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:08:46 050][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:46 056][TRACE][PID:8432]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:08:46 266][TRACE][PID:8432]API.CP.BASE.AAccountUtil:CGetJournalList
+[18/04/09 11:08:46 271][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:08:46 272][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:46 315][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:46 324][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:48 207][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:08:48 208][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:48 218][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:08:48 219][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:48 751][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:08:48 752][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:49 755][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:08:49 756][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:49 766][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:08:49 767][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:49 776][TRACE][PID:8432]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:08:49 779][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:08:49 780][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:49 908][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:08:49 909][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:49 915][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:08:49 920][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:08:50 430][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:08:50 441][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:09 109][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:09 110][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:09 136][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:09 137][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:09 147][TRACE][PID:8432]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:15:09 149][TRACE][PID:8432]API.CP.BASE.AAccountUtil:CGetJournalList
+[18/04/09 11:15:09 150][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:09 151][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:09 160][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:09 171][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:09 261][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:09 263][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:09 270][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:09 287][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:09 771][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:09 773][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:10 298][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:10 300][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:10 313][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:10 317][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:10 326][TRACE][PID:8432]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:15:10 371][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:10 378][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:10 386][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:10 387][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:10 870][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:10 872][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:11 960][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:11 962][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:11 969][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:11 982][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:11 989][TRACE][PID:8432]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:15:11 992][TRACE][PID:8432]API.CP.BASE.AAccountUtil:CGetJournalList
+[18/04/09 11:15:11 993][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:11 994][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:11 998][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:12 002][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:12 056][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:12 058][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:12 064][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:12 065][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:12 564][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:12 565][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:15 335][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:15 336][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:15 342][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:15 342][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:15 348][TRACE][PID:8432]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:15:15 395][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:15 397][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:15 403][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:15 408][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:15 901][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:15 903][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:16 176][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:16 177][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:16 184][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:16 185][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:16 191][TRACE][PID:8432]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:15:16 193][TRACE][PID:8432]API.CP.BASE.AAccountUtil:CGetJournalList
+[18/04/09 11:15:16 194][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:16 194][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:16 200][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:16 212][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:16 255][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:16 257][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:16 262][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:16 263][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:16 670][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:16 672][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:16 678][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:16 679][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:16 687][TRACE][PID:8432]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:15:16 759][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:16 760][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:16 808][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:16 811][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:16 827][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:16 834][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:17 157][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:17 160][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:17 168][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:17 171][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:17 179][TRACE][PID:8432]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:15:17 223][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:17 224][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:17 230][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:17 239][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:17 321][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:17 323][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:17 521][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:17 522][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:17 527][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:17 528][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:17 534][TRACE][PID:8432]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:15:17 591][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:17 593][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:17 598][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:17 599][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:17 729][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:17 730][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:18 102][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:18 104][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:18 178][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:18 179][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:18 186][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:18 187][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:18 194][TRACE][PID:8432]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:15:18 196][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:18 197][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:18 250][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:18 254][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:18 260][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:18 261][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:15:18 742][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:15:18 743][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:21:17 862][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:21:17 864][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:21:17 878][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:21:17 879][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:21:17 902][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:21:17 910][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:21:17 929][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:21:17 930][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:21:17 974][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:21:17 975][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:21:45 138][TRACE][PID:8432]API.CP.BASE.Payment.JAPaymentUtil:CGetQRImage
+[18/04/09 11:23:41 065][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:23:41 067][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:24:14 299][ERROR][PID:8432]System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---> System.ComponentModel.Win32Exception (0x80004005): 找不到网络路径。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbCo[18/04/09 11:24:14 300]nnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, [18/04/09 11:24:14 300]DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 AosuApp.AosuFramework.ADataSourceUtil.GetConnection(Hashtable Params) 位置 D:\workspace\netapps\04开发\01sourcecode\AosuFramework\AosuApp.Core\AosuFramework\Actions\ADataSourceUtil.cs:行号 184
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+[18/04/09 11:24:14 302][ERROR][PID:8432]Data Source=192.168.0.16;Initial Catalog=AosuApp;Persist Security Info=True;User ID=sa
+[18/04/09 11:24:14 305][ERROR][PID:8432]System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---> System.ComponentModel.Win32Exception (0x80004005): 找不到网络路径。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbCo[18/04/09 11:24:14 306]nnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, [18/04/09 11:24:14 306]DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 AosuApp.AosuFramework.ADataSourceUtil.GetConnection(Hashtable Params) 位置 D:\workspace\netapps\04开发\01sourcecode\AosuFramework\AosuApp.Core\AosuFramework\Actions\ADataSourceUtil.cs:行号 184
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+[18/04/09 11:24:14 410][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:24:14 419][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:24:29 777][ERROR][PID:8432]System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---> System.ComponentModel.Win32Exception (0x80004005): 找不到网络路径。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbCo[18/04/09 11:24:29 778]nnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, [18/04/09 11:24:29 778]DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 AosuApp.AosuFramework.ADataSourceUtil.GetConnection(Hashtable Params) 位置 D:\workspace\netapps\04开发\01sourcecode\AosuFramework\AosuApp.Core\AosuFramework\Actions\ADataSourceUtil.cs:行号 184
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+[18/04/09 11:24:29 780][ERROR][PID:8432]Data Source=192.168.0.16;Initial Catalog=AosuApp;Persist Security Info=True;User ID=sa
+[18/04/09 11:24:29 782][ERROR][PID:8432]System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---> System.ComponentModel.Win32Exception (0x80004005): 找不到网络路径。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbCo[18/04/09 11:24:29 783]nnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, [18/04/09 11:24:29 783]DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 AosuApp.AosuFramework.ADataSourceUtil.GetConnection(Hashtable Params) 位置 D:\workspace\netapps\04开发\01sourcecode\AosuFramework\AosuApp.Core\AosuFramework\Actions\ADataSourceUtil.cs:行号 184
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+[18/04/09 11:25:32 452][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:25:32 453][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:28:17 373][TRACE][PID:8432]API.CP.BASE.Payment.JAPaymentUtil:CGetQRImage
+[18/04/09 11:28:50 824][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:28:50 841][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:28:50 850][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:28:50 851][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:28:50 876][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:28:50 881][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:28:50 889][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:28:50 893][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:28:50 902][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:28:50 904][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:28:50 918][TRACE][PID:8432]API.CP.BASE.Payment.JAPaymentUtil:CGetQRImage
+[18/04/09 11:28:53 792][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:28:53 808][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:28:53 813][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:28:53 818][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:28:53 840][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:28:53 860][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:28:53 866][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:28:53 867][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:28:53 880][TRACE][PID:8432]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:28:53 881][TRACE][PID:8432]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:28:53 887][TRACE][PID:8432]API.CP.BASE.Payment.JAPaymentUtil:CGetQRImage
+[18/04/09 11:30:57 402][INFO ][PID:7180]开始!
+[18/04/09 11:30:57 402][INFO ][PID:7180]启动路径：E:\workspace\CAIKA365\CAIKA365\CAIKA365.WEB\
+[18/04/09 11:30:57 402][INFO ][PID:7180]开始!
+[18/04/09 11:30:57 402][INFO ][PID:7180]启动路径：E:\workspace\CAIKA365\CAIKA365\CAIKA365.WEB\
+[18/04/09 11:30:57 402][INFO ][PID:7180]配置路径：E:\workspace\CAIKA365\CAIKA365\CAIKA365.WEB\/Data/AosuConfig.xml
+[18/04/09 11:30:57 402][INFO ][PID:7180]配置路径：E:\workspace\CAIKA365\CAIKA365\CAIKA365.WEB\/Data/AosuConfig.xml
+[18/04/09 11:30:57 402][TRACE][PID:7180]AosuApp.AosuFramework.AWSDataUtil:CLoadData
+[18/04/09 11:30:57 452][TRACE][PID:7180]AosuApp.AosuFramework.AWSUtil:CServerState
+[18/04/09 11:30:57 472][TRACE][PID:7180]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:30:57 472][ERROR][PID:7180]AosuApp.Web.WSHandler.xml不存在!
+[18/04/09 11:30:57 502][TRACE][PID:7180]AosuApp.AosuFramework.AWSDataUtil:CLoadData
+[18/04/09 11:30:57 502][TRACE][PID:7180]AosuApp.AosuFramework.AWSUtil:CServerState
+[18/04/09 11:30:57 502][TRACE][PID:7180]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:30:57 502][ERROR][PID:7180]AosuApp.Web.WSHandler.xml不存在!
+[18/04/09 11:30:57 682][TRACE][PID:7180]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:30:57 692][TRACE][PID:7180]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:31:19 223][TRACE][PID:7180]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:31:33 361][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:33 407][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:33 455][TRACE][PID:7180]AosuApp.AosuSSO.APassport:CSignOn
+[18/04/09 11:31:33 465][TRACE][PID:7180]AosuApp.AosuSSO.ADomain:CCheckLicense
+[18/04/09 11:31:33 465][TRACE][PID:7180]AosuApp.AosuSSO.ADomain:CGetADomainDS
+[18/04/09 11:31:33 465][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:33 465][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:33 485][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:33 485][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:33 495][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:33 495][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:33 515][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:33 535][TRACE][PID:7180]AosuApp.AosuSSO.APassport:CVerifyPasswrod
+[18/04/09 11:31:33 535][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:33 535][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:33 535][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CPersistent
+[18/04/09 11:31:33 545][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:33 603][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:33 603][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:33 613][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CPersistent
+[18/04/09 11:31:33 613][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:33 681][TRACE][PID:7180]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:31:33 818][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:33 818][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:33 826][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:33 826][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:40 362][TRACE][PID:7180]AosuApp.AosuSSO.APassport:CSignOut
+[18/04/09 11:31:40 364][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:40 365][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:40 376][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CPersistent
+[18/04/09 11:31:40 386][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:40 504][TRACE][PID:7180]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:31:41 596][TRACE][PID:7180]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:31:54 945][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:54 946][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:54 953][TRACE][PID:7180]AosuApp.AosuSSO.APassport:CSignOn
+[18/04/09 11:31:54 953][TRACE][PID:7180]AosuApp.AosuSSO.ADomain:CCheckLicense
+[18/04/09 11:31:54 954][TRACE][PID:7180]AosuApp.AosuSSO.ADomain:CGetADomainDS
+[18/04/09 11:31:54 954][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:54 954][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:55 157][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:55 157][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:55 167][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:55 167][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:55 177][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:55 187][TRACE][PID:7180]AosuApp.AosuSSO.APassport:CVerifyPasswrod
+[18/04/09 11:31:55 187][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:55 187][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:55 187][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CPersistent
+[18/04/09 11:31:55 187][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:55 257][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:55 257][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:55 257][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CPersistent
+[18/04/09 11:31:55 257][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:55 292][TRACE][PID:7180]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:31:55 404][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:55 404][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:55 409][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:55 410][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:57 092][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:57 092][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:57 106][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:57 106][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:57 122][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:57 122][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:57 132][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:57 132][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:57 142][TRACE][PID:7180]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:31:57 262][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:57 262][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:57 450][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:57 450][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:57 465][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:57 466][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:31:57 977][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:31:57 977][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:32:20 681][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:32:20 681][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:32:20 691][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:32:20 691][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:32:20 771][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:32:20 771][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:32:20 793][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:32:20 793][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:32:20 800][TRACE][PID:7180]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:32:20 800][TRACE][PID:7180]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:32:20 818][TRACE][PID:7180]API.CP.BASE.Payment.JAPaymentUtil:CGetQRImage
+[18/04/09 11:34:59 821][INFO ][PID:7180]开始!
+[18/04/09 11:34:59 821][INFO ][PID:7180]启动路径：E:\workspace\CAIKA365\CAIKA365\CAIKA365.WEB\
+[18/04/09 11:34:59 822][INFO ][PID:7180]配置路径：E:\workspace\CAIKA365\CAIKA365\CAIKA365.WEB\/Data/AosuConfig.xml
+[18/04/09 11:34:59 824][TRACE][PID:7180]AosuApp.AosuFramework.AWSDataUtil:CLoadData
+[18/04/09 11:34:59 829][TRACE][PID:7180]AosuApp.AosuFramework.AWSUtil:CServerState
+[18/04/09 11:34:59 834][TRACE][PID:7180]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:34:59 835][ERROR][PID:7180]AosuApp.Web.WSHandler.xml不存在!
+[18/04/09 11:35:35 872][INFO ][PID:7180]开始!
+[18/04/09 11:35:35 872][INFO ][PID:7180]启动路径：E:\workspace\CAIKA365\CAIKA365\CAIKA365.WEB\
+[18/04/09 11:35:35 873][INFO ][PID:7180]配置路径：E:\workspace\CAIKA365\CAIKA365\CAIKA365.WEB\/Data/AosuConfig.xml
+[18/04/09 11:35:35 875][TRACE][PID:7180]AosuApp.AosuFramework.AWSDataUtil:CLoadData
+[18/04/09 11:35:35 879][TRACE][PID:7180]AosuApp.AosuFramework.AWSUtil:CServerState
+[18/04/09 11:35:35 885][TRACE][PID:7180]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:35:35 885][ERROR][PID:7180]AosuApp.Web.WSHandler.xml不存在!
+[18/04/09 11:37:38 221][TRACE][PID:7180]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:39:45 730][INFO ][PID:6488]开始!
+[18/04/09 11:39:45 740][INFO ][PID:6488]启动路径：E:\workspace\CAIKA365\CAIKA365\CAIKA365.WEB\
+[18/04/09 11:39:45 740][INFO ][PID:6488]配置路径：E:\workspace\CAIKA365\CAIKA365\CAIKA365.WEB\/Data/AosuConfig.xml
+[18/04/09 11:39:45 750][TRACE][PID:6488]AosuApp.AosuFramework.AWSDataUtil:CLoadData
+[18/04/09 11:39:45 790][TRACE][PID:6488]AosuApp.AosuFramework.AWSUtil:CServerState
+[18/04/09 11:39:45 800][TRACE][PID:6488]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:39:45 800][ERROR][PID:6488]AosuApp.Web.WSHandler.xml不存在!
+[18/04/09 11:39:46 000][TRACE][PID:6488]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:40:02 977][TRACE][PID:6488]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:40:10 001][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:10 009][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:10 105][TRACE][PID:6488]AosuApp.AosuSSO.APassport:CSignOn
+[18/04/09 11:40:10 115][TRACE][PID:6488]AosuApp.AosuSSO.ADomain:CCheckLicense
+[18/04/09 11:40:10 115][TRACE][PID:6488]AosuApp.AosuSSO.ADomain:CGetADomainDS
+[18/04/09 11:40:10 125][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:10 125][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:10 155][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:10 155][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:10 175][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:10 175][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:10 195][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:10 215][TRACE][PID:6488]AosuApp.AosuSSO.APassport:CVerifyPasswrod
+[18/04/09 11:40:10 215][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:10 215][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:10 225][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CPersistent
+[18/04/09 11:40:10 225][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:10 285][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:10 285][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:10 303][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CPersistent
+[18/04/09 11:40:10 305][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:10 354][TRACE][PID:6488]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:40:10 505][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:10 515][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:10 540][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:10 543][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:12 665][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:12 667][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:12 676][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:12 677][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:12 706][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:12 706][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:12 716][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:12 731][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:12 749][TRACE][PID:6488]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:40:12 870][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:12 870][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:15 780][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:15 782][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:15 794][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:15 795][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:16 296][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:16 296][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:17 262][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:17 262][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:17 262][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:17 262][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:17 282][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:17 282][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:17 292][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:17 292][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:17 304][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:17 305][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:17 320][TRACE][PID:6488]API.CP.BASE.Payment.JYPaymentUtil:CGetQRImage
+[18/04/09 11:40:24 637][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:24 644][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:24 649][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:24 650][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:24 656][TRACE][PID:6488]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:40:24 699][TRACE][PID:6488]API.CP.BASE.AAccountUtil:CGetJournalList
+[18/04/09 11:40:24 702][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:24 703][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:24 716][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:24 728][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:24 866][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:24 868][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:24 874][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:24 876][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:25 383][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:25 384][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:26 490][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:26 493][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:26 500][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:26 502][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:26 515][TRACE][PID:6488]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/09 11:40:26 516][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:26 517][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:26 573][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:26 577][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:26 582][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:26 583][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:27 084][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:27 085][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:48 280][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:48 290][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:48 290][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:48 290][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:48 310][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:48 320][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:48 334][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:48 349][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:48 362][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:48 364][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:48 379][TRACE][PID:6488]API.CP.BASE.Payment.JYPaymentUtil:CGetQRImage
+[18/04/09 11:40:51 312][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:51 322][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:51 322][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:51 322][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:51 362][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:51 381][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:51 390][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:51 395][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:51 401][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:51 403][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:51 410][TRACE][PID:6488]API.CP.BASE.Payment.JYPaymentUtil:CGetQRImage
+[18/04/09 11:40:57 175][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:57 175][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:57 175][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:57 185][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:57 228][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:57 229][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:57 234][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:57 237][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:57 244][TRACE][PID:6488]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/09 11:40:57 245][TRACE][PID:6488]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/09 11:40:57 250][TRACE][PID:6488]API.CP.BASE.Payment.JYPaymentUtil:CGetQRImage

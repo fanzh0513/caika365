@@ -1,0 +1,118 @@
+﻿<div class="order-bd">
+    <div class="order-tit clearfix">
+        <ul class="filter" style="margin-left: -12px;">
+            <li>
+                <div class="user-sel">
+                    <span class="sel-hd" style="width:60px;"><i class="arrow"></i><em>最近一周</em></span>
+                    <input class="sel-val" type="hidden" value="week1" autocomplete="off" id="pro_time" />
+                    <ul class="sel-menu">
+                        <li val="day1">今天</li>
+                        <li val="week1">最近一周</li>
+                        <li val="month1">最近一个月</li>
+                        <li val="his">历史记录</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="user-sel">
+                    <span class="sel-hd" style="width:60px;"><i class="arrow"></i><em>全部彩种</em></span>
+                    <input type="hidden" class="sel-val" value="" autocomplete="off" id="pro_lotid" />
+                    <div class="sel-menu" style="width:303px;border-top: 1px solid #d0d0d0;top: 20px;">
+                        <ul style="height:200px;width:75px;float:left;border-right: 1px solid #d0d0d0;">
+                            <li val="0">全部彩种</li>
+                        </ul>
+                        <ul style="height:200px;width:75px;float:left;border-right: 1px solid #d0d0d0;">
+                            <li val="130042">竞彩足球</li>
+                            <li val="130041">北京单场</li>
+                            <li val="130043">竞彩篮球</li>
+                            <li val="130011">胜负彩</li>
+                            <li val="130051">胜负过关</li>
+                            <li val="130019">任选九场</li>
+                            <li val="130018">4场进球彩</li>
+                            <li val="130016">6场半全场</li>
+                            <li val="140045" class="">冠军</li>
+                            <li val="140046" class="">冠亚军</li>
+                        </ul>
+                        <ul style="height:200px;width:75px;float:left;border-right: 1px solid #d0d0d0;">
+                            <li val="166406">11选5</li>
+                            <li val="168009">新11选5</li>
+                            <li val="165707">粤11选5</li>
+                            <li val="258001">新时时彩</li>
+                            <li val="255401">老时时彩</li>
+                            <li val="265108">北京快乐8</li>
+                            <li val="257503">快3</li>
+                            <li val="258203">新快3</li>
+                            <li val="255903">老快3</li>
+                            <li val="166407">快乐扑克</li>
+                        </ul>
+                        <ul style="height:200px;width:75px;float:left;">
+                            <li val="166507">幸运11选5</li>
+                            <li val="165207">上海11选5</li>
+                            <li val="166907">辽宁11选5</li>
+                            <li val="167607">新疆11选5</li>
+                            <li val="255803">好运快3</li>
+                            <li val="257703">湖北快3</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="user-sel">
+                    <span class="sel-hd" style="width:60px;"><i class="arrow"></i><em>全部类型</em></span>
+                    <input type="hidden" class="sel-val" value="0" autocomplete="off" id="pro_type" />
+                    <ul class="sel-menu">
+                        <li val="0">全部订单</li>
+                        <li val="1">代购订单</li>
+                        <li val="2">合买订单</li>
+                        <li val="3">追号订单</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="user-sel">
+                    <span class="sel-hd" style="width:60px;"><i class="arrow"></i><em>全部状态</em></span>
+                    <input type="hidden" class="sel-val" value="0" autocomplete="off" id="pro_stat" />
+                    <ul class="sel-menu">
+                        <li val="0">全部状态</li>
+                        <li val="1">未提交</li>
+                        <li val="2">未开奖</li>
+                        <li val="3">已中奖</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="order-form">
+        <table id="fixed_table" class="user-order-table f-dn" width="100%">
+            <thead></thead>
+        </table>
+        <table class="user-order-table" width="100%" id="fixed_table_src">
+            <thead>
+                <tr>
+                    <th width="110">时间</th>
+                    <th width="100" class="t-l">彩种|期次</th>
+                    <th width="100">发起人</th>
+                    <th width="117">方案描述</th>
+                    <th width="80">我购买了</th>
+                    <th width="60">进度</th>
+                    <th width="60" class="t-l">出票状态</th>
+                    <th width="95">我的奖金</th>
+                    <th width="70">详情</th>
+                </tr>
+            </thead>
+            <tbody id="pro_betlist">
+                <tr class="un"><td colspan="9">暂无记录</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="page f-dn" id="betlist_page">
+        共有<em class="record_count">0</em>条记录，共有<em class="page_count">0</em>页
+        <span class="pagesub" pageno="1" pages="0"></span>
+    </div>
+    <div class="line2"></div>
+</div>
+<div class="data-info">
+    <h3>购彩记录-注意事项：</h3>
+    <p>历史记录指当年近一个月之前的所有购彩记录（<em class="red">不包含近一个月的投注记录</em>）；</p>
+    <p>如订单已显示奖金，但彩票账户实际未派发奖金，请耐心等待，系统正在与彩票中心核算奖金，预计30分钟左右派发到您的彩票账户；</p>
+</div>

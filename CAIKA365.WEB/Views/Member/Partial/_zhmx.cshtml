@@ -1,0 +1,224 @@
+﻿@model CAIKA365.WEB.ClassLibs.PageModel
+@using CAIKA365.WEB.ClassLibs;
+@using API.CP.BASE;
+@using System.Data;
+<div class="order-bd">
+    <div class="order-tit clearfix">
+        <h2><i></i>账户明细</h2>
+        <ul class="filter">
+            <li id="trace_time">
+                <div class="user-sel">
+                    @{
+                        string time = Model.Parameters.Time;
+                        string time_title = "最近一周";
+                        switch (time)
+                        {
+                            case "day1":
+                                time_title = "今天";
+                                break;
+                            case "month1":
+                                time_title = "最近一个月";
+                                break;
+                            case "month3":
+                                time_title = "最近三个月";
+                                break;
+                            case "month6":
+                                time_title = "最近六个月";
+                                break;
+                        }
+                    }
+                    <span class="sel-hd" style="width:60px;"><i class="arrow"></i><em>@time_title</em></span>
+                    <input type="hidden" class="sel-val" value="@time" autocomplete="off" id="pro_time" />
+                    <ul class="sel-menu">
+                        <li act="loadJournal" val="day1">今天</li>
+                        <li act="loadJournal" val="week1">最近一周</li>
+                        <li act="loadJournal" val="month1">最近一个月</li>
+                        <li act="loadJournal" val="month3">最近三个月</li>
+                        <li act="loadJournal" val="month6">最近六个月</li>
+                    </ul>
+                </div>
+            </li>
+            <li id="trace_type">
+                <div class="user-sel">
+                    @{
+                        string type = Model.Parameters.Type;
+                        string type_title = "全部";
+                        switch (type)
+                        {
+                            case "deposit":
+                                type_title = "充值";
+                                break;
+                            case "withdraw":
+                                type_title = "提现";
+                                break;
+                            case "consume":
+                                type_title = "投注";
+                                break;
+                            case "bonus":
+                                type_title = "中奖";
+                                break;
+                            case "cancel":
+                                type_title = "撤单";
+                                break;
+                            case "returned":
+                                type_title = "返点";
+                                break;
+                            case "exchanged":
+                                type_title = "积分兑换";
+                                break;
+                            case "activity":
+                                type_title = "活动派送";
+                                break;
+                        }
+                    }
+                    <span class="sel-hd" style="width:60px;"><i class="arrow"></i><em>@type_title</em></span>
+                    <input type="hidden" class="sel-val" value="@time" autocomplete="off" id="pro_type" />
+                    <ul class="sel-menu">
+                        <li act="loadJournal" val="">全部</li>
+                        <li act="loadJournal" val="deposit">充值</li>
+                        <li act="loadJournal" val="withdraw">提现</li>
+                        <li act="loadJournal" val="consume">投注</li>
+                        <li act="loadJournal" val="bonus">中奖</li>
+                        <li act="loadJournal" val="cancel">撤单</li>
+                        <li act="loadJournal" val="returned">返点</li>
+                        <li act="loadJournal" val="exchanged">积分兑换</li>
+                        <li act="loadJournal" val="activity">活动派送</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <span class="c9" style="padding-left:15px; ">最多可查询6个月</span>
+    </div>
+    <div class="order-form">
+        <div class="account-list">
+            <p style="margin-bottom: -5px;">
+                <span class="tit" style="color:red;font-weight:bold;">收入：</span>
+                <span class="list-item"><span class="v">充值金额&nbsp;</span><span class="k"><em class="num" id="deposited">@Model.Parameters.Deposited</em>元</span></span>
+                <span class="list-item"><span class="v">中奖金额&nbsp;</span><span class="k"><em class="num" id="bonus">@Model.Parameters.Bonus</em>元</span></span>
+                <span class="list-item"><span class="v">积分兑换&nbsp;</span><span class="k"><em class="num" id="exchanged">@Model.Parameters.Exchanged</em>元</span></span>
+                <span class="list-item"><span class="v">游戏返点&nbsp;</span><span class="k"><em class="num" id="returned">@Model.Parameters.Returned</em>元</span></span>
+            </p>
+            <p>
+                <span class="tit" style="color: green; font-weight: bold;">支出：</span>
+                <span class="list-item"><span class="v">投注金额&nbsp;</span><span class="k"><em class="num" id="consume">@Model.Parameters.Consume</em>元</span></span>
+                <span class="list-item"><span class="v">提款金额&nbsp;</span><span class="k"><em class="num" id="withdraw">@Model.Parameters.Withdraw</em>元</span></span>
+            </p>
+        </div>
+        <div class="order-table">
+            <table class="table" width="100%" id="fixed_table_src">
+                <thead>
+                    <tr>
+                        <th width="160" style="font-weight:bold">流水号</th>
+                        <th width="210" style="font-weight:bold">交易时间</th>
+                        <th width="140" style="font-weight:bold">交易类型</th>
+                        <th width="190" style="font-weight:bold">发生金额</th>
+                        <th width="190" style="font-weight:bold">账户余额</th>
+                        <th width="260" style="font-weight:bold">备注</th>
+                        <th width="80" style="font-weight:bold">状态</th>
+                    </tr>
+                </thead>
+                <tbody id="pro_betlist">
+                    @{
+                        int idx = 0;
+                        if (Model.Parameters.List != null)
+                        {
+                            foreach (DataRow row_item in (Model.Parameters.List as DataTable).Rows)
+                            {
+                                string cls = "";
+                                if (idx % 2 == 1)
+                                {
+                                    cls = "style=background:#f3f2f2;";
+                                }
+                                <tr @cls>
+                                    <td>@row_item["ID"]</td>
+                                    @{
+                                switch (row_item.Field<string>("TYPE"))
+                                {
+                                    case API.CP.BASE.journal_type.充值:
+                                        <td>@row_item["JOURNALTIME"]</td>
+                                        <td>充值</td>
+                                        <td style="color: red; font-weight:bold">+@row_item["AMOUNT"]</td>
+                                        break;
+                                    case API.CP.BASE.journal_type.提现:
+                                    <td>@row_item["JOURNALTIME"]</td>
+                                    <td>提现</td>
+                                    <td style="color: green; font-weight: bold">-@row_item["AMOUNT"]</td>
+                                        break;
+                                    case API.CP.BASE.journal_type.撤单:
+                                    <td>@row_item["JOURNALTIME"]</td>
+                                    <td>撤单</td>
+                                    <td style="color: red; font-weight: bold">+@row_item["AMOUNT"]</td>
+                                        break;
+                                    case API.CP.BASE.journal_type.返点:
+                                    <td>@row_item["JOURNALTIME"]</td>
+                                    <td>返点</td>
+                                    <td style="color: red; font-weight: bold">+@row_item["AMOUNT"]</td>
+                                        break;
+                                    case API.CP.BASE.journal_type.活动派送:
+                                    <td>@row_item["JOURNALTIME"]</td>
+                                    <td>活动派送</td>
+                                    <td style="color: red; font-weight: bold">+@row_item["AMOUNT"]</td>
+                                        break;
+                                    case API.CP.BASE.journal_type.积分兑换:
+                                    <td>@row_item["JOURNALTIME"]</td>
+                                    <td>积分兑换</td>
+                                    <td style="color: red; font-weight: bold">+@row_item["AMOUNT"]</td>
+                                        break;
+                                    case API.CP.BASE.journal_type.中奖:
+                                    <td>@row_item["JOURNALTIME"]</td>
+                                    <td>中奖</td>
+                                    <td style="color: red; font-weight: bold">+@row_item["AMOUNT"]</td>
+                                        break;
+                                    case API.CP.BASE.journal_type.投注:
+                                    <td>@row_item["JOURNALTIME"]</td>
+                                    <td>投注</td>
+                                    <td style="color: green; font-weight: bold">-@row_item["AMOUNT"]</td>
+                                        break;
+                                    case API.CP.BASE.journal_type.其它:
+                                    <td>@row_item["JOURNALTIME"]</td>
+                                    <td>其它</td>
+                                    <td style="font-weight: bold">@row_item["AMOUNT"]</td>
+                                        break;
+                                }
+                                    }
+                                    <td>@row_item["AVAILABLE"]</td>
+                                    <td>@row_item["REMARK"]</td>
+                                    @{
+                                switch (row_item.Field<string>("STATE"))
+                                {
+                                    case API.CP.BASE.journal_state.待审核:
+                                        <td style="color:green">待审核</td>
+                                        break;
+                                    case API.CP.BASE.journal_state.已审核:
+                                    <td style="color:red">已审核</td>
+                                        break;
+                                }
+                                    }
+                                </tr>
+                                idx++;
+                            }
+                        }
+                        if (idx == 0)
+                        {
+                            <tr class="un"><td colspan='7'>暂无记录</td></tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="page" id="betlist_page">
+        共有<em class="record_count">[@idx]</em>条记录，共有<em class="page_count">[@Model.Parameters.PageNums]</em>页
+        <span class="pagesub" pagenum="@Model.Parameters.PageNums">
+            <a href="return javascript:void(0);" act="loadJournal" class="pageup lnk">上一页</a>
+            <a href="return javascript:void(0);" act="loadJournal" class="pagedown lnk">下一页</a>
+            <span class="ext">跳转至 <input type="text" class="go_page_no" value="@Model.Parameters.PageNo" /> 页 <a href="return javascript:void(0);" act="loadJournal" class="btn-middle">确定</a></span>
+        </span>
+    </div>
+    <div class="line"></div>
+</div>
+<div class="data-info">
+    <h3>账户明细-注意事项：</h3>
+    <p>您可以查询账户近6个月内的资金使用明细；</p>
+    <p>消费失败（撤单返款），会把金额直接返款到您的账户对应的余额里；</p>
+</div>

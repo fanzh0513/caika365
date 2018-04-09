@@ -1,0 +1,35 @@
+﻿@model CAIKA365.WEB.ClassLibs.PageModel
+@using CAIKA365.WEB.ClassLibs;
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <title>Passport</title>
+    @Url.IncludeRes(@Model)
+    <script>
+        Core.navInit("@Model.AppDomain", "@Model.ResVersion")
+    </script>
+</head>
+<body>
+    <div class="m-confirm f-dn" id="confirm">
+        <div class="note">你确定放弃注册吗？</div>
+        <div class="f-cb btnbox">
+            <a class="u-btn-confirm f-ib btncolor" data-action="confirmgoon">继续</a>
+            <a class="u-btn-confirm f-ib btncolor-ext" data-action="confirmclose">放弃</a>
+        </div>
+    </div>
+    <div class="g-bd" id="cnt-box-parent">
+        <div class="loading f-dn" id="loading"></div>
+        <div class="g-bd" id="cnt-box">
+            <div class="m-header">
+                <div class="u-closebtn" data-action="doclose"></div>
+                <div class="headimg j-headimg"></div>
+            </div>
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+﻿@{
+    Layout = "~/Views/Shared/_Passport.cshtml";
+}
+<script>Core && Core.setPage && Core.setPage("register");</script>
+<div class="m-cnt">
+    <form id="register-form">
+        <div class="m-container">
+            <div class="inputbox inputbox2" id="account-box">
+                <div class="u-input box">
+                    <input id="account" data-auto-focus="false" data-required="true" class="j-inputtext zcemail" type="text" maxlength="30" autocomplete="off" tabindex="1" spellcheck="false" placeholder="用户名/手机号/邮箱地址">
+                </div>
+                <div class="u-tip" style="display: none;">
+                    <div class="u-success u-clear"></div>
+                </div>
+            </div>
+            <div class="fur-change-email"></div>
+            <div class="inputbox">
+                <div class="u-input box">
+                    <input id="password" data-required="true" class="j-inputtext" type="password" autocomplete="new-password" maxlength="16" tabindex="2" spellcheck="false" placeholder="6-16位密码，区分大小写">
+                </div>
+                <div class="u-tip" style="display: none;">
+                    <div class="u-success u-clear"></div>
+                </div>
+            </div>
+            <div class="fur-change-email"></div>
+            <div class="inputbox">
+                <div class="u-input box">
+                    <input id="repassword" data-required="true" class="j-inputtext" type="password" autocomplete="new-password" maxlength="16" tabindex="2" spellcheck="false" placeholder="请再次输入密码">
+                </div>
+                <div class="u-tip" style="display: none;">
+                    <div class="u-success u-clear"></div>
+                </div>
+            </div>
+            <div class="fur-change-email"></div>
+            <div>
+                <div class="inputbox vcode">
+                    <div class="u-logo">
+                        <div class="u-logo-img3"></div>
+                    </div>
+                    <div class="u-input box">
+                        <input id="code" tabindex="2" class="j-inputtext" spellcheck="false" maxlength="4" placeholder="验证码" data-required="true">
+                    </div>
+                </div>
+                <div class="vcodeimg">
+                    <img id="valiCode" style="cursor: pointer;" class="col-md-2 control-label" src="@Href("~/member/getvImage")" alt="验证码" />
+                </div>
+            </div>
+            <div class="m-nerror f-dn" id="nerror">
+                <div class="ferrortail"></div>
+                <div class="ferrorhead"></div>
+            </div>
+            <div class="f-cb loginbox">
+                <a id="doregister" data-action="doregister" class="u-loginbtn btncolor tabfocus" tabindex="5">注　册</a>
+            </div>
+            <div class="fur-item fur-agree">
+                <label>
+                    我已同意<a href="http://reg.163.com/agreement.shtml" target="_blank" tabindex="-1">《彩咖网服务条款》</a>
+                </label>
+            </div>
+        </div>
+    </form>
+</div>

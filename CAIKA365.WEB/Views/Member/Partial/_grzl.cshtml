@@ -1,0 +1,154 @@
+﻿@using AosuApp.AosuFramework;
+@using System.Data;
+@model CAIKA365.WEB.ClassLibs.PageModel
+<div class="order-bd">
+    <div class="order-tit utit clearfix">
+        <h2><i></i>个人资料</h2>
+        <span style="padding-left: 10px;"><em class="c6">如果身份证信息填写错误，单击</em><a href="javascript:void(0);" t='request' tip='是否确认提交修改用户资料的申请' val="1" class="lnk"><span class="f-red1">[申请修改]</span></a>；请留意您的系统消息。</span>
+    </div>
+@{
+    DictSetUtil ds_info = new DictSetUtil(Model.Parameters.MemberInfo as DataSet);
+    if (Model.Parameters.InfoIsFull)
+    {
+        string realname = ds_info.GetValue("REALNAME").Substring(0, 1) + "".PadRight(ds_info.GetValue("REALNAME").Length - 1, '*');
+        string id = ds_info.GetValue("UID").Substring(0, 4) + "".PadRight(ds_info.GetValue("UID").Length - 6, '*') + ds_info.GetValue("UID").Substring(ds_info.GetValue("UID").Length - 2);
+        <div class="order-form">
+            <div class="profile first pro-completed">
+                <p class="text-center fsz16 green" style="margin-left: -66px;"><i class="ico ico-succ"></i><strong> 您已经完善个人资料，信息如下</strong></p>
+                <ul class="profile-form">
+                    <li>
+                        <span class="v">真实姓名：</span>
+                        <span class="k">@realname</span>
+                    </li>
+                    <li>
+                        <span class="v">证件号码：</span>
+                        <span class="k">@id</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="order-form first">
+            <div class="profile first">
+                <h3 class="tit"><strong style="font-size:14px;color:#666;padding-left: 45px;">账号基本信息</strong></h3>
+                <ul class="profile-form first-dd">
+                    <li>
+                        <span class="v">登录账号：</span>
+                        <span class="k"><em class="name">@ds_info.GetValue("SSOPST").Replace("@caika.com", "")</em></span>
+                    </li>
+                    <li>
+                        <span class="v"><em class="red">*</em> 账户昵称：</span>
+                        <span class="k">
+                            <input id="nickname" type="text" class="text input-large" value="@ds_info.GetValue("NICKNAME")" t-name="输入账户昵称" required="true" autocomplete="off" tabindex="1" maxlength="20"><em class="txt-t"></em>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="v"><em class="red">*</em> 邮箱地址：</span>
+                        <span class="k">
+                            <input id="email" type="text" class="text input-large" value="@ds_info.GetValue("EMAIL")" t-name="输入邮箱地址" required="true" autocomplete="off" tabindex="2" maxlength="20"><em class="txt-t"></em>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="profile">
+                <h3 class="tit">
+                    <strong style="font-size:14px;color:#666;padding-left: 45px;">补充实名信息</strong>
+                    <span class="pro" style="padding-left: 5px;">(实名信息将作为您领奖和提款时的重要凭证，且提款绑定银行卡的开户名需保持一致，注：填写后不可修改)</span>
+                </h3>
+                <ul class="profile-form " id="shiming">
+                    <li>
+                        <span class="v"><em class="red zhudong">*</em>真实姓名：</span>
+                        <span class="k">
+                            <input type="text" class="text input-large" t-name="输入真实姓名" required="true" value="@ds_info.GetValue("REALNAME")" autocomplete="off" maxlength="50" tabindex="3" id="realname"><em class="txt-t gray">必需和证件上一致</em>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="v"><em class="red zhudong">*</em>选择证件类型：</span>
+                        <span class="k">
+                            <div class="u-select " style="width:155px;">
+                                <span class="txt-box"><span class="arrow-box"><i class="arrow"></i></span><em class="txt">身份证</em></span>
+                                <ul class="list" style="width:153px;">
+                                    <li val="1" len="20" txt="请输入15或18位身份证号码">
+                                        身份证
+                                    </li>
+                                    <li val="2" len="11" txt="请输入11位大陆通行证">
+                                        大陆通行证
+                                    </li>
+                                    <li val="3" len="10" txt="请输入7-10位台胞证">
+                                        台胞证
+                                    </li>
+                                </ul>
+                                @{
+                                    string idtype = ds_info.GetValue("IDTYPE");
+                                    if(string.IsNullOrEmpty(idtype))
+                                    {
+                                        idtype = "1";
+                                    }
+                                }
+                                <input type="hidden" id="idtype" required="true" value="@idtype" autocomplete="off">
+                            </div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="v"><em class="red zhudong">*</em><em id="zhengjian_name">证件号码</em>：</span>
+                        <span class="k">
+                            <input type="text" class="text input-large" required="true" value="@ds_info.GetValue("UID")" t-name="输入证件号码" autocomplete="off" maxlength="20" tabindex="4" id="ident"><em class="txt-t"></em>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="profile">
+                <h3 class="tit"><strong style="font-size:14px;color:#666;padding-left: 45px;">账户安全设置</strong></h3>
+                <ul class="profile-form">
+                    <li>
+                        <span class="v"><em class="red">*</em> 密保问题：</span>
+                        <span class="k">
+                            <div class="u-select" style="width:218px;">
+                                <span class="txt-box"><span class="arrow-box"><i class="arrow"></i></span><em class="txt">请选择密保问题</em></span>
+                                <ul class="list" style="width:216px;">
+                                    <li val="1">您妈妈的名字是什么？</li>
+                                    <li val="2">您的出生地在哪？</li>
+                                    <li val="3">您的小学叫什么名字？</li>
+                                    <li val="4">您的宠物名字叫什么？</li>
+                                    <li val="5">您中学第一位班主任姓名是？</li>
+                                    <li val="6">您小学第一位班主任姓名是？</li>
+                                    <li val="7">您中学第一位数学老师姓名是？</li>
+                                </ul>
+                                <input type="hidden" value="@ds_info.GetValue("ASKID")" required="true" id="ask">
+                            </div>
+                        </span>
+                        <em class="txt-t red f-dn"><i class="ico ico-error2 "></i>请选择密保问题</em>
+                    </li>
+                    <li>
+                        <span class="v"><em class="red">*</em> 问题答案：</span>
+                        <span class="k">
+                            <input type="text" class="text input-large" required="true" value="@ds_info.GetValue("ANSWER")" t-name="输入密保答案" autocomplete="off" maxlength="18" tabindex="5" id="answer"><em class="txt-t gray">请设置一个便于记忆的密保答案</em>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="profile">
+                <ul class="profile-form">
+                    <li>
+                        <span class="v"><em class="red">*</em> 登录密码：</span>
+                        <span class="k">
+                            <input type="password" class="text input-large" autocomplete="off" tabindex="6" maxlength="16" value="" id="ppass" error="登录密码输入有误"><em class="txt-t"></em>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn profile-btn">
+                <span class="ubtn3" act="postinfo">立即设置</span>
+            </div>
+        </div>
+    }
+}
+    <div class="line"></div>
+</div>
+<div class="data-info">
+    <h3>温馨提示：</h3>
+    <p>真实姓名、身份证号码是领奖和提现的重要凭证，手机号码是为确保您中大奖后我们及时与您取得联系，请务必真实有效的填写。</p>
+    <p>依据财政部《彩票发行与销售管理暂行规定》未满18岁不得购买彩票。</p>
+</div>

@@ -1,0 +1,80 @@
+﻿@model CAIKA365.WEB.ClassLibs.PageModel
+<div id="userCenter">
+    <div class="mod-user-hd clearfix">
+        <div class="user-logo"><img src="~/content/css/imgs/index/usr-icon.png" alt=""><a href="javascript:;" class="logo-mask"></a></div>
+        <h1 class="cp-tit">我的彩票</h1>
+        <ul class="user-info">
+            <li class="f-dn"><i class="ico ico-msg"></i>&nbsp;</li>
+            <li class="f-dn"><i class="ico ico-phone"></i>&nbsp;</li>
+        </ul>
+        <div class="user-hd-fr">上次登录时间：@Model.Parameters.LoginTime</div>
+    </div>
+    <div class="mod-user-bd clearfix">
+        <div class="aside">
+            <ul class="menu-record">
+                <li pid="zhmx"><a href="@Href("~/member/usercenter/zhmx")"><i class="ico ico-plan"></i>账户明细<i class="ico ico-arrow"></i></a></li>
+                <li pid="gcjl"><a href="@Href("~/member/usercenter/gcjl")"><i class="ico ico-buy"></i>购彩记录<i class="ico ico-arrow"></i></a></li>
+                <li pid="zhjl"><a href="@Href("~/member/usercenter/zhjl")"><i class="ico ico-zhui"></i>追号记录<i class="ico ico-arrow"></i></a></li>
+                <li pid="gdjl"><a href="@Href("~/member/usercenter/gdjl")"><i class="ico ico-gen"></i>跟单记录<i class="ico ico-arrow"></i></a></li>
+            </ul>
+            <div class="aside-mod">
+                <ul class="menu-tools clearfix">
+                    <li pid="czlink"><a href="@Href("~/member/usercenter/czlink")"><em>我要充值</em></a></li>
+                    <li pid="tklink"><a href="@Href("~/member/usercenter/tklink")"><em>我要提款</em></a></li>
+                    <li pid="zhmxdeposit"><a href="@Href("~/member/usercenter/zhmx?t=deposit")"><em>充值记录</em></a></li>
+                    <li pid="zhmxwithdraw"><a href="@Href("~/member/usercenter/zhmx?t=withdraw")"><em>提款记录</em></a></li>
+                    <li pid="zhmxexchanged"><a href="@Href("~/member/usercenter/zhmx?t=exchanged")"><em>积分兑换</em></a></li>
+                    <li class="w-auto"><a href="@Href("~/home/activity")" target="_blank"><em>活动中心</em></a></li>
+                </ul>
+            </div>
+            <div class="line"></div>
+            <div class="aside-mod menu-set">
+                <h3>账户设置</h3>
+                <ul>
+                    <li pid="grzl"><a href="@Href("~/member/usercenter/grzl")"><i class="ico ico-infor"></i>个人资料</a></li>
+                    <li pid="zhmm"><a href="@Href("~/member/usercenter/zhmm")"><i class="ico ico-psw"></i>密码管理</a></li>
+                    <li pid="bdyhk"><a href="@Href("~/member/usercenter/bdyhk")"><i class="ico ico-bank"></i>绑定银行卡</a></li>
+                    <li pid="msglist"><a href="@Href("~/member/usercenter/msglist")"><i class="ico ico-message"></i>系统消息</a></li>
+                    @*@{
+                        if (Model.Parameters.NewMsgCount == 0)
+                        {
+                        }
+                        else
+                        {
+                            <li pid="msglist"><a href="/member/usercenter/msglist"><i class="ico ico-message"></i>系统消息&nbsp;<strong><span class="f-red1">(<span id="newCount">@Model.Parameters.NewMsgCount</span>)</span></strong></a></li>
+                        }
+                    }*@
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $("li[pid='@Model.Parameters.Pid']").addClass("current");
+        </script>
+        <div class="article">
+            <div class="userinfo clearfix" id="user_money">
+                <div class="userinfo-l">
+                    <span class="info-item info-item-cont" style="cursor:default">
+                        当前用户：<em class="nickname">@Model.Parameters.NickName</em>
+                    </span>
+                    <span class="info-item info-item-cont">
+                        可用余额：<em class="money">@Model.Parameters.Available</em> 元
+                    </span>
+                    <span class="info-item info-item-cont">
+                        冻结金额：<em class="money">@Model.Parameters.Freezed</em> 元
+                    </span>
+                    <span class="info-item info-item-cont">
+                        可用积分：<em class="money">@Model.Parameters.Score</em>
+                    </span>
+                    <span class="info-item">
+                        <a href="@Href("~/member/usercenter/czlink")">现在充值</a><em>|</em>
+                        <a href="@Href("~/member/usercenter/tklink")">马上提款</a>
+                    </span>
+                </div>
+            </div>
+            @{
+                Html.RenderPartial("partial/_" + (string)Model.Parameters.Subpage);
+            }
+        </div>
+    </div>
+</div>
+<br />

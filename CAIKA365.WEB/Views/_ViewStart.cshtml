@@ -1,0 +1,13 @@
+﻿@{
+    string action = ViewContext.RouteData.Route.GetRouteData(Context).Values["action"].ToString();
+    switch (action.ToLower())
+    {
+        case "login":
+        case "register":
+            Layout = "~/Views/Shared/_Passport.cshtml";
+            break;
+        default:
+            Layout = "~/Views/Shared/_Default.cshtml";
+            break;
+    }
+}

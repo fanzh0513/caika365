@@ -1,0 +1,71 @@
+﻿@model CAIKA365.WEB.ClassLibs.PageModel
+<div class="order-bd">
+    <div class="utit clearfix">
+        <ul class="tit-tab">
+            <li class="active" rel="#paypwd" val="pay"><a href="javascript:void(0);">修改支付密码</a></li>
+            <li rel="#loginpwd" val="lgn"><a href="javascript:void(0);">修改登录密码</a></li>
+        </ul>
+    </div>
+    <div class="order-form">
+        <p class="top-tips"><i class="ico ico-info-s"></i> 客服提示：为了保障您的账户资金安全，建议您定期修改支付密码并牢记，以便安全购彩</p>
+        <div class="profile first">
+            <ul class="profile-form" id="paypwd">
+                <li>
+                    <span class="v">当前支付密码：</span>
+                    <span class="k">
+                        @{
+                            string style = "", tip = "请输入当前正在使用的支付密码";
+                            if(Convert.ToBoolean(Model.Parameters.WithdrawIsEmpty))
+                            {
+                                style = "readonly=readonly style=background-color:#eee";
+                                tip = "（提示：当前账户没有设置支付密码）";
+                            }
+                        }
+                        <input type="password" class="text input-large" autocomplete="off" maxlength="16" id="c_pass_pay" @style error="支付密码输入有误"><em class="txt-t gray">@tip</em>
+                    </span>
+                </li>
+                <li>
+                    <span class="v">新支付密码：</span>
+                    <span class="k">
+                        <input type="password" class="text input-large" autocomplete="off" maxlength="16" id="n_pass_pay" error="请输入6-16位新支付密码，至少包含字母和数字"><em class="txt-t gray">请输入6-16位新支付密码</em>
+                    </span>
+                </li>
+                <li>
+                    <span class="v">再次输入新支付密码：</span>
+                    <span class="k">
+                        <input type="password" class="text input-large" autocomplete="off" maxlength="16" id="z_pass_pay" rel="#n_pass_pay" error="请再输入一次新支付密码"><em class="txt-t gray">请再输入一次新支付密码</em>
+                    </span>
+                </li>
+            </ul>
+            <ul class="profile-form f-dn" id="loginpwd">
+                <li>
+                    <span class="v">当前登录密码：</span>
+                    <span class="k">
+                        <input type="password" class="text input-large" autocomplete="off" maxlength="16" id="c_pass_lgn" error="请输入当前的登录密码"><em class="txt-t gray">请输入当前正在使用的登录密码</em>
+                    </span>
+                </li>
+                <li>
+                    <span class="v">新登录密码：</span>
+                    <span class="k">
+                        <input type="password" class="text input-large" autocomplete="off" maxlength="16" id="n_pass_lgn" error="请输入6-16位新登录密码，至少包含字母和数字"><em class="txt-t gray">请输入6-16位新登录密码</em>
+                    </span>
+                </li>
+                <li>
+                    <span class="v">再次输入新登录密码：</span>
+                    <span class="k">
+                        <input type="password" class="text input-large" autocomplete="off" maxlength="16" id="z_pass_lgn" rel="#n_pass_lgn" error="请再输入一次新登录密码"><em class="txt-t gray">请再输入一次新登录密码</em>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="btn profile-btn">
+            <span class="ubtn3" act="post_pwd">立即修改</span>
+        </div>
+    </div>
+    <div class="line"></div>
+</div>
+<div class="data-info">
+    <h3>注意事项：</h3>
+    <p><span class="f-red1">[支付密码]</span>可用于积分兑换以及对账户可用余额的提款操作，请妥善保管好该密码；</p>
+    <p>由于该涉及到账户资金安全，所以网站不提供支付密码找回功能；如果您忘记了该密码，可以联系你的上级管理员或者提交<a href="javascript:void(0);" t='request' tip='是否确认提交找回支付密码的申请' val="2"><span class="f-red1"><strong>[找回支付密码]</strong></span></a>请求进行申述；</p>
+</div>

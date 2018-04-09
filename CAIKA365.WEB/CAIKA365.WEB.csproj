@@ -1,0 +1,302 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D5513420-5113-437B-9611-800626A56DAB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CAIKA365.WEB</RootNamespace>
+    <AssemblyName>CAIKA365.WEB</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AosuApp.Core, Version=4.617.1123.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\AosuStudio\AosuFramework\AosuApp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="AosuApp.Web">
+      <HintPath>C:\Windows\AosuStudio\AosuWS\bin\AosuApp.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\css\base.css" />
+    <Content Include="Content\css\core.css" />
+    <Content Include="Content\css\dialog.css" />
+    <Content Include="Content\css\imgs\czlogo_35x35_ac7bb92.png" />
+    <Content Include="Content\css\imgs\czlogo_45x45_f521cbe.png" />
+    <Content Include="Content\css\imgs\czlogo_60x64_c3e6742.png" />
+    <Content Include="Content\css\imgs\czlogo_81x85_38bbe04.png" />
+    <Content Include="Content\css\imgs\cz_hot_c3f9dbc.gif" />
+    <Content Include="Content\css\imgs\dialogBox\dialog2_ba7d934.png" />
+    <Content Include="Content\css\imgs\dialogBox\dialogIcon_fc91cd1.png" />
+    <Content Include="Content\css\imgs\dialogBox\dialog_926ea58.png" />
+    <Content Include="Content\css\imgs\headfoot_4f7e92e.png" />
+    <Content Include="Content\css\imgs\head_repeat_cf38636.png" />
+    <Content Include="Content\css\imgs\icon16px_2a8fd21.png" />
+    <Content Include="Content\css\imgs\index\arrow-up.png" />
+    <Content Include="Content\css\imgs\index\forms-icon.png" />
+    <Content Include="Content\css\imgs\index\headFigureDefault.jpg" />
+    <Content Include="Content\css\imgs\index\index-mark.png" />
+    <Content Include="Content\css\imgs\index\indexIcon_other_2a7a5a0.png" />
+    <Content Include="Content\css\imgs\index\order-icon.png" />
+    <Content Include="Content\css\imgs\index\t019f679bb3e502ca26.png" />
+    <Content Include="Content\css\imgs\index\usr-icon.png" />
+    <Content Include="Content\css\imgs\loading.gif" />
+    <Content Include="Content\css\index\temp.css" />
+    <Content Include="Content\images\noimage.png" />
+    <Content Include="Content\css\imgs\pp\flags.gif" />
+    <Content Include="Content\css\imgs\pp\logo-for-urs_a8d4969.png" />
+    <Content Include="Content\css\imgs\pp\sp.png" />
+    <Content Include="Content\css\imgs\pp\sp8.png" />
+    <Content Include="Content\css\imgs\pp\sprite.png" />
+    <Content Include="Content\css\imgs\pp\sprite8.png" />
+    <Content Include="Content\css\imgs\userCenter\t011641fad3c56aed41.png" />
+    <Content Include="Content\css\imgs\userCenter\t012e5fe6987f6a8918.png" />
+    <Content Include="Content\css\imgs\userCenter\t014836fcf5a63b8ec1.png" />
+    <Content Include="Content\css\imgs\userCenter\t014bb2e88ff55d81aa.png" />
+    <Content Include="Content\css\imgs\userCenter\t018af20130253ce54b.png" />
+    <Content Include="Content\css\imgs\userCenter\t0192942babe40f23d5.png" />
+    <Content Include="Content\css\imgs\userCenter\t01d7d79a781ce20b16.png" />
+    <Content Include="Content\css\imgs\userCenter\t01df0f338156f403ba.png" />
+    <Content Include="Content\css\imgs\userCenter\t01e43f2501440fe5be-1.png" />
+    <Content Include="Content\css\imgs\userCenter\t01e43f2501440fe5be.png" />
+    <Content Include="Content\css\imgs\userCenter\t01ecc8e6187c49ca99.png" />
+    <Content Include="Content\css\index\carousel.css" />
+    <Content Include="Content\css\index\index.css" />
+    <Content Include="Content\css\pp\login-urs-red-201604.css" />
+    <Content Include="Content\css\pp\urs.css" />
+    <Content Include="Content\css\userCenter\common.css" />
+    <Content Include="Content\images\favicon.ico" />
+    <Content Include="Content\images\forms-icon.jpg" />
+    <Content Include="Content\images\headFigure\134580899612.jpg" />
+    <Content Include="Content\images\headFigure\1473241637392_1.jpg" />
+    <Content Include="Content\images\headFigure\1473309705276_1.png" />
+    <Content Include="Content\images\headFigure\1473334944050_1.png" />
+    <Content Include="Content\images\headFigure\2014071320TT68247858.jpg" />
+    <Content Include="Content\images\order-icon.jpg" />
+    <Content Include="Content\images\tileimage.png" />
+    <Content Include="Content\images\wlht.jpg" />
+    <Content Include="Content\js\com\carousel.js" />
+    <Content Include="Content\js\com\dialog.js" />
+    <Content Include="Content\js\config.js" />
+    <Content Include="Content\js\core.js" />
+    <Content Include="Content\js\core_test.js" />
+    <Content Include="Content\js\easyTools\drag.js" />
+    <Content Include="Content\js\easyTools\event.js" />
+    <Content Include="Content\js\easyTools\scroll.js" />
+    <Content Include="Content\js\easyTools\tools.js" />
+    <Content Include="Content\js\flash.js" />
+    <Content Include="Content\js\index\index.js" />
+    <Content Include="Content\js\index\pp.js" />
+    <Content Include="Content\js\jquery-1.4.2.js" />
+    <Content Include="Content\js\jquery.jsonp.js" />
+    <Content Include="Content\js\placeholder.js" />
+    <Content Include="Content\js\shareAction.js" />
+    <Content Include="Content\js\timer.js" />
+    <Content Include="Content\js\tools.js" />
+    <Content Include="Content\js\userCenter\index.js" />
+    <Content Include="Content\js\userCenter\userMessage.js" />
+    <Content Include="Content\static\lotteryList.html" />
+    <Content Include="Data\AosuConfig.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\config\core.res" />
+    <Content Include="Data\config\dialog.res" />
+    <Content Include="Data\config\pp.res" />
+    <Content Include="Data\config\usercenter.res" />
+    <Content Include="Data\model\core.xml" />
+    <Content Include="Data\model\dialog.xml" />
+    <Content Include="Data\model\pp.xml" />
+    <Content Include="Data\model\usercenter.xml" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RazorViewEngineConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="ClassLibs\BaseController.cs" />
+    <Compile Include="ClassLibs\JSONObject\carouselItem.cs" />
+    <Compile Include="ClassLibs\JSONObject\journalItem.cs" />
+    <Compile Include="ClassLibs\JSONObject\messageItem.cs" />
+    <Compile Include="ClassLibs\JSONObject\regionItem.cs" />
+    <Compile Include="ClassLibs\PageModel.cs" />
+    <Compile Include="ClassLibs\Utils\Authorizes.cs" />
+    <Compile Include="ClassLibs\Utils\ResUtils.cs" />
+    <Compile Include="ClassLibs\Utils\VerificationCodeUtil.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MemberController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="Content\PSD\未标题-1.psd" />
+    <Content Include="Content\PSD\未标题-3.psd" />
+    <Content Include="Content\PSD\未标题-2.psd" />
+    <Content Include="Content\PSD\未标题-4.psd" />
+    <Content Include="Content\PSD\未标题-5-1.psd" />
+    <Content Include="Content\PSD\未标题-5-2.psd" />
+    <Content Include="Content\PSD\未标题-5.psd" />
+    <Content Include="Content\PSD\未标题-6.psd" />
+    <None Include="packages.config" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Member\Partial\_bdyhk.cshtml" />
+    <Content Include="Views\Member\Partial\_czlink.cshtml" />
+    <Content Include="Views\Member\Partial\_gcjl.cshtml" />
+    <Content Include="Views\Member\Partial\_gdjl.cshtml" />
+    <Content Include="Views\Member\Partial\_grzl.cshtml" />
+    <Content Include="Views\Member\Partial\_msglist.cshtml" />
+    <Content Include="Views\Member\Partial\_tklink.cshtml" />
+    <Content Include="Views\Member\Partial\_zhjl.cshtml" />
+    <Content Include="Views\Member\Partial\_zhmm.cshtml" />
+    <Content Include="Views\Member\Partial\_zhmx.cshtml" />
+    <Content Include="Views\Member\Login.cshtml" />
+    <Content Include="Views\Member\Register.cshtml" />
+    <Content Include="Views\Member\UserCenter.cshtml" />
+    <Content Include="Views\Shared\_Default.cshtml" />
+    <Content Include="Views\Shared\_Passport.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Member\PreDeposit.cshtml" />
+    <Content Include="Views\Shared\_Empty.cshtml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\images\activities\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\API.CP.BASE\API.CP.BASE.csproj">
+      <Project>{6cb329cb-f5f1-4a6a-834c-d5b38a850e3c}</Project>
+      <Name>API.CP.BASE</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>15731</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:15643/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>xcopy $(ProjectDir)Data\config $(TargetDir)Data\config /e /i /y
+xcopy $(ProjectDir)Data\model $(TargetDir)Data\model /e /i /y</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

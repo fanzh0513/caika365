@@ -1,0 +1,130 @@
+﻿@model CAIKA365.WEB.ClassLibs.PageModel
+@using CAIKA365.WEB.ClassLibs;
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="@Href("~/content/images/favicon.ico")" />
+    <meta name="msapplication-TileColor" content="#b82337" />
+    <meta name="msapplication-TileImage" content="@Href("~/content/images/tileimage.png")" />
+    <title>@Model.Title</title>
+    <meta name="keywords" content="@Model.Keywords" />
+    <meta name="description" content="@Model.Description" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    @Url.IncludeRes(Model)
+</head>
+<body>
+    <noscript>
+        <div id="noScript">
+            <div><h2>请开启浏览器的Javascript功能</h2><p>亲，没它我们玩不转啊！求您了，开启Javascript吧！<br />不知道怎么开启Javascript？那就请<a href="https://www.baidu.com/s?wd=如何打开Javascript功能" rel="nofollow" target="_blank">猛击这里</a>！</p></div>
+        </div>
+    </noscript>
+    <nav id="topNav">
+        <div id="topNavWrap">
+            <div id="topNavLeft">
+                <script>
+                    Core.navInit("@Model.AppDomain", "@Model.ResVersion")
+                </script>
+            </div>
+            <ul id="topNavRight">
+                <li class="f-dn">
+                    <span id="topInfo" style="display: inline;">
+                        <span>账户余额：<strong id="available" class="c_ba2636">0.00</strong> 元　|</span>
+                        <a href="javascript:void(0);" id="czlink" class="topNavHolder">充值</a> |
+                        <a href="javascript:void(0);" id="tklink" class="topNavHolder">申请提款</a> |
+                        <a href="javascript:void(0);" id="gcjl" class="topNavHolder">我的订单</a> |
+                        <a href="javascript:void(0);" id="zhmx" class="topNavHolder">报表查询</a> |
+                    </span>
+                </li>
+                <li>
+                    <div class="mcDropMenuBox">
+                        <a target="_blank" class="topNavHolder" href="#" rel="nofollow">帮助<i></i></a>
+                        <div class="mcDropMenu">
+                            <a target="_blank" href="#" rel="nofollow">如何充值</a>
+                            <a target="_blank" href="#" rel="nofollow">如何领奖</a>
+                            <a target="_blank" href="#" rel="nofollow">如何提现</a>
+                            <a target="_blank" href="#" rel="nofollow">意见反馈</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="topTabBox">
+        <div id="topTab">
+            <ul id="funcTab">
+                <li id="lotteryListEntry" class="noSubList">
+                    <a class="topNavHolder" hidefocus="true" rel="nofollow">选择彩种<i></i></a>
+                </li>
+                <li class="active"><a href="@Url.Action("index", "home")">首页</a>|</li>
+                <li><a href="@Url.Action("award", "home")" title="彩票开奖结果及中奖榜单">开奖榜单<i></i></a>|</li>
+                <li><a href="@Url.Action("trend", "home")" title="走势图">走势图</a>|</li>
+                <li><a href="@Url.Action("live", "home")" title="比分直播">比分直播</a>|</li>
+                <li class="wordsNum4 tl">
+                    <a href="@Url.Action("activity", "home")" title="资料库">资料库<i></i></a>|
+                    <div class="mcDropMenu">
+                        <a href="#">赔率中心</a>
+                        <a href="#">足球资料库</a>
+                        <a href="#">篮球资料库</a>
+                    </div>
+                </li>
+                <li class="wordsNum2">
+                    <a href="@Url.Action("activity", "home")" title="活动">最新活动<i></i></a>
+                    <div class="mcDropMenu">
+                        <a href="#">签到有奖</a>
+                        <a href="#">彩票红包</a>
+                        <a href="#">积分乐园</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    @RenderBody()
+    <footer id="docFoot">
+        <ul id="guideList">
+            <li class="first">
+                <em class="guide_1"></em>
+                <em class="guide_1_con"></em>
+            </li>
+            <li>
+                <em class="guide_2"></em><span>
+                    &middot; <a target="_blank" href="#" title="购彩流程">购彩流程</a><br />
+                    &middot; <a target="_blank" href="#" title="领奖流程">领奖流程</a><br />
+                </span>
+            </li>
+            <li>
+                <em class="guide_3"></em><span>
+                    &middot; <a target="_blank" href="#" rel="nofollow">网银支付</a><br />
+                    &middot; <a target="_blank" href="#" rel="nofollow">支付宝支付</a><br />
+                    &middot; <a target="_blank" href="#" rel="nofollow">手机充值卡支付</a>
+                </span>
+            </li>
+            <li>
+                <em class="guide_4"></em><span>
+                    &middot; <a target="_blank" href="#" title="新手购彩图解">新手购彩图解</a><br />
+                    &middot; <a target="_blank" href="#" title="常见问题">常见问题</a><br />
+                    &middot; <a target="_blank" href="#" title="功能指引">功能指引</a><br />
+                    &middot; <a target="_blank" href="#" title="彩种介绍">彩种介绍</a>
+                </span>
+            </li>
+            <li>
+                <em class="guide_5"></em><span>
+                    &middot; <a target="_blank" href="#">彩票</a>&nbsp;
+                    <a target="_blank" href="#">电影票</a><br />
+                    &middot; <a target="_blank" href="#">保险</a>&nbsp;
+                    <a target="_blank" href="#">火车票</a><br />
+                    &middot; <a target="_blank" href="#">美美</a>&nbsp;
+                    <a target="_blank" href="#">印像派</a><br />
+                    &middot; <a target="_blank" href="#">商城</a>
+                </span>
+            </li>
+        </ul>
+        <div id="aboutCaiKa">
+            <a href="#" rel="nofollow">公司简介</a> - <a href="#" rel="nofollow">联系方法</a> - <a href="#" rel="nofollow">招聘信息</a> - <a href="#" rel="nofollow">客户服务</a> - <a href="#" rel="nofollow">隐私政策</a> - <a href="#" rel="nofollow">网络营销</a> - <a href="#">网站地图</a> - <a href="#" title="彩咖网">彩咖网</a><br />
+            彩咖网版权所有 &copy;2011-2018
+        </div>
+    </footer>
+    <script>Core && Core.fastInit && Core.fastInit("1");</script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

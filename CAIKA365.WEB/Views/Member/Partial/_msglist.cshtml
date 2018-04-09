@@ -1,0 +1,75 @@
+﻿@using System.Data;
+@using API.CP.BASE;
+@model CAIKA365.WEB.ClassLibs.PageModel
+<div class="order-bd">
+    <div class="order-tit clearfix">
+        <h2><i></i>系统消息</h2>
+    </div>
+    <div class="order-form">
+        <div class="order-table">
+            <table class="table" width="100%" id="fixed_table_src">
+                <thead>
+                    <tr>
+                        <th width="210" style="font-weight:bold">消息</th>
+                        <th width="140" style="font-weight:bold">类型</th>
+                        <th width="160" style="font-weight:bold">时间</th>
+                        <th width="80" style="font-weight:bold">操作</th>
+                    </tr>
+                </thead>
+                <tbody id="msglist">
+                    @{
+    int idx = 0;
+    if (Model.Parameters.List != null)
+    {
+        foreach (DataRow row_item in (Model.Parameters.List as DataTable).Rows)
+        {
+            string type = "";
+            switch (row_item.Field<int>("MSGTYPE"))
+            {
+                case message_id.Account_KeyIn_BankCard:
+                case message_id.Account_KeyIn_DetailInfo:
+                case message_id.Account_KeyIn_Withdrawals:
+                    type = "账户提示";
+                    break;
+                default:
+                    type = "系统消息";
+                    break;
+            }
+            string cls = "";
+            if (idx % 2 == 1)
+            {
+                cls = "style=background:#f3f2f2;";
+            }
+            string flag = "0";
+            if (row_item.Field<string>("STATE") == message_state.UnRead)
+            {
+                flag = "1";
+                cls = string.IsNullOrEmpty(cls) ? "style=font-weight:bold;" : cls += "font-weight:bold;";
+            }
+            <tr @cls flag="@flag" id="@row_item["MSGID"]">
+                <td><a href="javascript:void(0)" act="readMsg">@row_item["MSGTITLE"]</a></td>
+                <td>@type</td>
+                <td>@row_item["CTIME"]</td>
+                <td><a href="javascript:void(0)" act="deleteMsg">删除</a></td>
+            </tr>
+            idx++;
+        }
+    }
+    if (idx == 0)
+    {
+                    <tr class="un"><td colspan='4'>暂无记录</td></tr>
+                }
+            }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="page" id="betlist_page">
+        共有<em class="record_count">[<span id="record_count">@idx</span>]</em>条记录，共有<em class="page_count">[@Model.Parameters.PageNums]</em>页
+        <span class="pagesub" pagenum="@Model.Parameters.PageNums">
+            <a href="return javascript:void(0);" act="loadMsglist" class="pageup lnk">上一页</a>
+            <a href="return javascript:void(0);" act="loadMsglist" class="pagedown lnk">下一页</a>
+            <span class="ext">跳转至 <input type="text" class="go_page_no" value="@Model.Parameters.PageNo" /> 页 <a href="return javascript:void(0);" act="loadMsglist" class="btn-middle">确定</a></span>
+        </span>
+    </div>
+</div>
