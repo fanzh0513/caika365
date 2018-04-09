@@ -90,12 +90,14 @@ namespace CAIKA365.WEB.Controllers
                 if (channel == "qrway" && double.TryParse(Request["a"], out double amount) && amount > 0)
                 {
                     // 得到接口数据并解析其对应的支付接口逻辑。
-                    UriUtil mm = PaymentUtil.GetInterface(channel, payId);
-                    ParamUtil paramUtil = PickParam(Request.QueryString)
-                        .SetCmd(mm.GetQueryItem(ActionUtil.Cmd)).ExecuteCmd(mm.GetActionInstance(GetControl()));
-                    if (paramUtil.IsOK())
+                    UriUtil paymethod = PaymentUtil.GetInterface(channel, payId);
+                    if(paymethod != null)
                     {
-                        // 
+                        ParamUtil paramUtil = PickParam(Request.QueryString).SetCmd(paymethod.GetQueryItem(ActionUtil.Cmd)).ExecuteCmd(paymethod.GetActionInstance(GetControl()));
+                        if (paramUtil.IsOK())
+                        {
+                            // 
+                        }
                     }
                 }
             }

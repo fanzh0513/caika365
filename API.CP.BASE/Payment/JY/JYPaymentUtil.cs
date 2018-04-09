@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Collections;
+using System.Net;
+using System.IO;
+using System.Xml;
 
 namespace API.CP.BASE.Payment
 {
@@ -56,7 +59,7 @@ namespace API.CP.BASE.Payment
             // HTTP响应数据（JSON）
             // rspCode	响应码	                int		响应码（参见附录说明4.2）	是
             // rspMsg	响应消息	            String 	200	Http请求响应消息	是
-            // data		        JSON类			是
+            // data		响应结果                JSON类			是
 
             // DATA的JSON格式：
             // r1_mchtid	    商户ID	            int		商户ID	是
@@ -69,6 +72,41 @@ namespace API.CP.BASE.Payment
             // sign	            签名	            String 	40	MD5签名	是
 
 
+            byte[] data = Encoding.Default.GetBytes("p1_mchtid=xxx&p2_paytype=yyy&p3_paymoney=asfdasfd");
+            HttpWebRequest aRequest = HttpWebRequest.Create("http://xxx.www.afasfda") as HttpWebRequest;
+            aRequest.Method = "POST";
+            aRequest.ContentType = "application/x-www-form-urlencoded; charset=UTF-8";
+            aRequest.ContentLength = data.Length;
+            using (Stream postStream = aRequest.GetRequestStream())
+            {
+                postStream.Write(data, 0, data.Length);
+            }
+
+            string tokenStr = "";
+            using (HttpWebResponse postResponse = aRequest.GetResponse() as HttpWebResponse)
+            {
+                using (StreamReader aStream = new StreamReader(postResponse.GetResponseStream(), Encoding.UTF8))
+                {
+                    string responseStr = aStream.ReadToEnd();
+
+                    tokenStr = responseStr.Replace("&amp;", "&");
+                    using (XmlReader aReader = XmlReader.Create(new StringReader(responseStr)))
+                    {
+                        aReader.ReadToFollowing("attr");
+                        tokenStr = "\"" + aReader.ReadElementContentAsString() + "\"";
+                    }
+                }
+            }
+
+
+            //PickParam(Params).GetValue<string>("a");
+            //PickParam(Params).GetValueAsString("p");
+            //string s_id  = PickParam(Params).GetValueAsString("v");
+            //string u_id = PickParam(Params).GetValueAsString("u");
+
+            //var m = Params["a"];
+
+            //string orderId = new DictSetUtil(null).PushSLItem(s_id).PushSLItem(u_id).DoSignature();
 
         }
 
