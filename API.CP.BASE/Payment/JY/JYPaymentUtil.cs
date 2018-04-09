@@ -11,6 +11,9 @@ namespace API.CP.BASE.Payment
     {
         public const string CGetQRImage = "CGetQRImage";
 
+
+
+
         public const string CQR4ALiPay = "CQR4ALiPay";
 
         public const string CQR4WeiX = "CQR4WeiX";
