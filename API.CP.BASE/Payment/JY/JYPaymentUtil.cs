@@ -127,7 +127,9 @@ namespace API.CP.BASE.Payment
                         switch (response_data.rspCode)
                         {
                             case 1:
-                                PickParam(Params).SetParam(response_data.data);
+                                // 创建支付订单，状态置为"未处理"，同时将二维码返回到前端页面。
+
+                                PickParam(Params).SetParam(response_data.data.r6_qrcode);
                                 break;
                             default:
                                 PickParam(Params).SetError(response_data.rspMsg);

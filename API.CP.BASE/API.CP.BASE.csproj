@@ -49,6 +49,7 @@
     <Compile Include="global.cs" />
     <Compile Include="Payment\JY\jy_qr_response.cs" />
     <Compile Include="Payment\TXF\TXFPaymentUtil.cs" />
+    <Compile Include="Payment\TXF\txf_qr_response.cs" />
     <Compile Include="Utils\PaymentUtil.cs" />
     <Compile Include="Payment\JY\JYPaymentUtil.cs" />
     <Compile Include="Utils\MemberDBUtils.cs" />

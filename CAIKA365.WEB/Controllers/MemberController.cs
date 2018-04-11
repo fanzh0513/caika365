@@ -13,6 +13,7 @@ using System.Web.Security;
 using CAIKA365.WEB.ClassLibs;
 using CAIKA365.WEB.JSONObject;
 using System.IO;
+using API.CP.BASE.Payment;
 
 namespace CAIKA365.WEB.Controllers
 {
@@ -92,7 +93,7 @@ namespace CAIKA365.WEB.Controllers
                 {
                     // 得到接口数据并解析其对应的支付接口逻辑。
                     Hashtable htPayment = PaymentUtil.GetPaymethod2Hashtable(channel, payId);
-                    if(htPayment != null)
+                    if (htPayment != null)
                     {
                         UriUtil uriUtil = null;
                         try
@@ -103,14 +104,11 @@ namespace CAIKA365.WEB.Controllers
                         {
                         }
 
-                        if(uriUtil != null)
+                        if (uriUtil != null)
                         {
                             ParamUtil paramUtil = PickParam(Request.QueryString).Merge(htPayment).SetCmd(uriUtil.GetQueryItem(ActionUtil.Cmd)).ExecuteCmd(uriUtil.GetActionInstance(GetControl()));
                             if (paramUtil.IsOK())
                             {
-                                // 创建支付订单，状态置为"未处理"，同时将二维码返回到前端页面。
-                                
-
                                 return File(new FileStream(Server.MapPath(paramUtil.GetValueAsString()), FileMode.Open, FileAccess.Read), "image/png");
                             }
                         }
