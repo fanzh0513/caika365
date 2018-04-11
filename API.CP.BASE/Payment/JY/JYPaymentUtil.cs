@@ -8,6 +8,8 @@ using System.Net;
 using System.IO;
 using System.Xml;
 using System.Security.Cryptography;
+using System.Data;
+using AosuApp.AosuData;
 
 namespace API.CP.BASE.Payment
 {
@@ -72,17 +74,40 @@ namespace API.CP.BASE.Payment
             // r7_paytype	    支付方式	        String 	20	支付网关(参见附录说明4.3)	是
             // sign	            签名	            String 	40	MD5签名	是
 
+            //string t = EncryptMD5("p1_mchtid=22225&p2_paytype=WEIXIN&p3_paymoney=0.99&p8_signtype=1&p11_isshow=1&p4_orderno=" + orderId + "&p5_callbackurl=http://localhost:15643/member/usercenter/submitDeposit");
+            ////p1_mchtid=22222&p2_signtype=1&p3_orderno=20171014161133666&p4_version=v2.8e465b1d4cad5ca6201b05cc3ddf041aa
+
+
+            //byte[] data = Encoding.UTF8.GetBytes("p1_mchtid=22225&p2_paytype=WEIXIN&p3_paymoney=0.99&p8_signtype=1&p11_isshow=1&p4_orderno=" +
+            //    ""+ orderId+ "&p5_callbackurl=http://pay.095pay.com/api/order/pay&p7_version=v2.8&sign=" + t);
+
+
+            DictSetUtil dictSet = new DictSetUtil(PickParam(Params).ExportDS());
+            DictSetUtil dictParams = new DictSetUtil(new DSUtil(dictSet.MyDS).SetFilter(DictSet.TableName, string.Format("{0} LIKE 'params.%'", DictSet.FN_MCCanShu)).ExportDS());
+
             string s_id = PickParam(Params).GetValueAsString("v");
             string u_id = PickParam(Params).GetValueAsString("u");
-
+            string a_id = PickParam(Params).GetValueAsString("a");
             string orderId = new DictSetUtil(null).PushSLItem(s_id).PushSLItem(u_id).DoSignature();
-            
-            string t = EncryptWithMD5("p1_mchtid=22222&p2_signtype=1&p3_orderno=20171014161133666&p4_version=v2.8e465b1d4cad5ca6201b05cc3ddf041aa");
-            //"p1_mchtid=22225&p2_paytype=WEIXIN&p3_paymoney=0.99&p8_signtype=1&p11_isshow=1&p4_orderno=" + orderId + "&p5_callbackurl=http://pay.095pay.com/api/order/pay&p7_version=v2.87eb1bed4217fe23c814b159fb6d66755"
 
-            byte[] data = Encoding.Default.GetBytes("p1_mchtid=22225&p2_paytype=WEIXIN&p3_paymoney=0.99&p8_signtype=1&p11_isshow=1&p4_orderno=" +
-                ""+ orderId+ "&p5_callbackurl=http://pay.095pay.com/api/order/pay&p7_version=v2.8&sign=" + t);
-            
+            List<string> aList = new List<string>();
+            aList.Add("p1_mchtid=" + dictParams.GetValue("params.p1_mchtid"));     // 商户ID
+
+            aList.Add("p2_paytype=" + dictParams.GetValue("params.p2_paytype"));    // 支付方式
+            aList.Add("p3_paymoney="+ a_id);   // 支付金额
+            aList.Add("p4_orderno=" + orderId);    // 商户平台唯一订单号
+            aList.Add("p5_callbackurl="+dictParams.GetValue("params.p5_callbackurl"));   // 商户异步回调通知地址
+            aList.Add("p6_notifyurl=" + dictParams.GetValue("params.p6_notifyurl"));   // 商户同步通知地址
+            aList.Add("p7_version=" + dictParams.GetValue("params.p7_version"));    // 版本号
+            aList.Add("p8_signtype=" + dictParams.GetValue("params.p8_signtype"));   // 签名加密方式
+            aList.Add("p9_attach=");     // 备注信息，上行中attach原样返回
+            aList.Add("p10_appname=");   // 分成标识
+            aList.Add("p11_isshow=");    // 是否显示收银台
+            aList.Add("p12_orderip=");   // 商户的用户下单IP
+            aList.Add("sign=");          // 签名
+
+            byte[] data = Encoding.UTF8.GetBytes(string.Join("&", aList));
+
             HttpWebRequest aRequest = HttpWebRequest.Create("http://pay.095pay.com/api/order/pay") as HttpWebRequest;
             aRequest.Method = "POST";
             aRequest.ContentType = "application/x-www-form-urlencoded; charset=UTF-8";
@@ -96,30 +121,34 @@ namespace API.CP.BASE.Payment
             {
                 using (StreamReader aStream = new StreamReader(postResponse.GetResponseStream(), Encoding.UTF8))
                 {
-                    var mm = AosuApp.DataToJsonString.Deserialize<object>(aStream.ReadToEnd());
+                    jy_qr_response response_data = AosuApp.DataToJsonString.Deserialize<jy_qr_response>(aStream.ReadToEnd());
+                    if(response_data != null)
+                    {
+                        switch (response_data.rspCode)
+                        {
+                            case 1:
+                                PickParam(Params).SetParam(response_data.data);
+                                break;
+                            default:
+                                PickParam(Params).SetError(response_data.rspMsg);
+                                break;
+                        }
+                    }
                 }
             }
-
-
-            //PickParam(Params).GetValue<string>("a");
-            //PickParam(Params).GetValueAsString("p");
-
-            //var m = Params["a"];
-
-
         }
-        private string EncryptWithMD5(string source)
+
+        private string EncryptMD5(string source)
         {
-            byte[] sor = Encoding.Default.GetBytes(source);
+            byte[] bysource = Encoding.UTF8.GetBytes(source);
             MD5 md5 = MD5.Create();
-            byte[] result = md5.ComputeHash(sor);
-            StringBuilder strbul = new StringBuilder(40);
+            byte[] result = md5.ComputeHash(bysource);
+            StringBuilder strbuilder = new StringBuilder(40);
             for (int i = 0; i < result.Length; i++)
             {
-                strbul.Append(result[i].ToString("x2"));//加密结果"x2"结果为32位,"x3"结果为48位,"x4"结果为64位
-
+                strbuilder.Append(result[i].ToString("x2"));//加密结果"x2"结果为32位,"x3"结果为48位,"x4"结果为64位
             }
-            return strbul.ToString();
+            return strbuilder.ToString();
         }
 
         private void QR4ALiPay(Hashtable Params)

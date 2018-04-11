@@ -73,6 +73,7 @@ namespace CAIKA365.WEB.Controllers
         [HttpPost]
         public JsonResult submitDeposit()
         {
+            // 
             return Json("success", JsonRequestBehavior.AllowGet);
         }
 
@@ -84,19 +85,34 @@ namespace CAIKA365.WEB.Controllers
             {
                 // 防止重复提交，客户端会在触发充值时生成一个时间戳作为标识。
                 string t_id = Request.QueryString["v"];
-                string username = Request["u"];
+                string username = Request.QueryString["u"];
                 string channel = Request.QueryString["c"];
                 string payId = Request.QueryString["p"];
                 if (channel == "qrway" && double.TryParse(Request["a"], out double amount) && amount > 0)
                 {
                     // 得到接口数据并解析其对应的支付接口逻辑。
-                    UriUtil paymethod = PaymentUtil.GetInterface(channel, payId);
-                    if(paymethod != null)
+                    Hashtable htPayment = PaymentUtil.GetPaymethod2Hashtable(channel, payId);
+                    if(htPayment != null)
                     {
-                        ParamUtil paramUtil = PickParam(Request.QueryString).SetCmd(paymethod.GetQueryItem(ActionUtil.Cmd)).ExecuteCmd(paymethod.GetActionInstance(GetControl()));
-                        if (paramUtil.IsOK())
+                        UriUtil uriUtil = null;
+                        try
                         {
-                            // 
+                            uriUtil = new UriUtil(PickParam(htPayment).GetValueAsString("PAYLINK"));
+                        }
+                        catch (Exception)
+                        {
+                        }
+
+                        if(uriUtil != null)
+                        {
+                            ParamUtil paramUtil = PickParam(Request.QueryString).Merge(htPayment).SetCmd(uriUtil.GetQueryItem(ActionUtil.Cmd)).ExecuteCmd(uriUtil.GetActionInstance(GetControl()));
+                            if (paramUtil.IsOK())
+                            {
+                                // 创建支付订单，状态置为"未处理"，同时将二维码返回到前端页面。
+                                
+
+                                return File(new FileStream(Server.MapPath(paramUtil.GetValueAsString()), FileMode.Open, FileAccess.Read), "image/png");
+                            }
                         }
                     }
                 }
