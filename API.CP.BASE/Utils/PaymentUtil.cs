@@ -1,10 +1,8 @@
 ﻿using AosuApp.AosuFramework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data;
 using System.Collections;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace API.CP.BASE
 {
@@ -31,6 +29,20 @@ namespace API.CP.BASE
             }
 
             return aHT;
+        }
+
+        public static string EncryptMD5(string source)
+        {
+            byte[] bysource = Encoding.UTF8.GetBytes(source);
+            MD5 md5 = MD5.Create();
+            byte[] result = md5.ComputeHash(bysource);
+            StringBuilder strbuilder = new StringBuilder(40);
+            for (int i = 0; i < result.Length; i++)
+            {
+                strbuilder.Append(result[i].ToString("x2"));//加密结果"x2"结果为32位,"x3"结果为48位,"x4"结果为64位
+            }
+
+            return strbuilder.ToString();
         }
     }
 }

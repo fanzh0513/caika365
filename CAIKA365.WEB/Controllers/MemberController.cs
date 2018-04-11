@@ -1,19 +1,18 @@
 ﻿using AosuApp.AosuFramework;
 using AosuApp.AosuSSO;
 using API.CP.BASE;
+using CAIKA365.WEB.ClassLibs;
+using CAIKA365.WEB.JSONObject;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
-using CAIKA365.WEB.ClassLibs;
-using CAIKA365.WEB.JSONObject;
-using System.IO;
-using API.CP.BASE.Payment;
 
 namespace CAIKA365.WEB.Controllers
 {
@@ -29,64 +28,12 @@ namespace CAIKA365.WEB.Controllers
             return View("Login", new PageModel(this, @"model\pp.xml"));
         }
 
-        [HttpPost]
-        public ActionResult preDeposit()
-        {
-            Hashtable aHT = Authorizes.GetAuthorizeCache(Request);
-            if (aHT != null)
-            {
-                // 防止重复提交，客户端会在触发充值时生成一个时间戳作为标识。
-                string t_id = Request["t_id"];
-                string username = Request["username"];
-                double amount;
-                if (!string.IsNullOrEmpty(t_id) && !string.IsNullOrEmpty(username) && double.TryParse(Request["amount"], out amount) && amount > 0)
-                {
-                    Hashtable payment = CommonDBUtils.GetPaymentInfo(Request["payid"]);
-                    if (payment != null)
-                    {
-                        switch (Request["channel"])
-                        {
-                            case "netpay":
-                                break;
-                            case "fastway":
-                                break;
-                            case "thirdway":
-                                break;
-                        }
-
-                        PageModel model = new PageModel(this, @"model\usercenter.xml");
-                        model.Parameters.TID = t_id;
-                        model.Parameters.Account = username;
-                        model.Parameters.PayLink = payment["PAYLINK"];
-                        model.Parameters.PayMethod = payment["PAYMETHOD"];
-                        model.Parameters.Amount = amount;
-
-                        return View("PreDeposit", model);
-                    }
-                }
-
-                return Redirect("/Error");
-            }
-
-            return Redirect("/");
-        }
-
-        [HttpPost]
-        public JsonResult submitDeposit()
-        {
-            // 
-            return Json("success", JsonRequestBehavior.AllowGet);
-        }
-
         [HttpGet]
-        public FileStreamResult getQRImage()
+        public FileContentResult getQRImage()
         {
             Hashtable aHT = Authorizes.GetAuthorizeCache(Request);
             if (aHT != null)
             {
-                // 防止重复提交，客户端会在触发充值时生成一个时间戳作为标识。
-                string t_id = Request.QueryString["v"];
-                string username = Request.QueryString["u"];
                 string channel = Request.QueryString["c"];
                 string payId = Request.QueryString["p"];
                 if (channel == "qrway" && double.TryParse(Request["a"], out double amount) && amount > 0)
@@ -109,14 +56,39 @@ namespace CAIKA365.WEB.Controllers
                             ParamUtil paramUtil = PickParam(Request.QueryString).Merge(htPayment).SetCmd(uriUtil.GetQueryItem(ActionUtil.Cmd)).ExecuteCmd(uriUtil.GetActionInstance(GetControl()));
                             if (paramUtil.IsOK())
                             {
-                                return File(new FileStream(Server.MapPath(paramUtil.GetValueAsString()), FileMode.Open, FileAccess.Read), "image/png");
+                                return File(paramUtil.GetValue<byte[]>(), paramUtil.GetValueAsString("content-type"));
                             }
                         }
                     }
                 }
             }
 
-            return File(new FileStream(Server.MapPath("~/content/images/noimage.png"), FileMode.Open, FileAccess.Read), "image/png");
+            // 返回默认二维码图片
+            using (Image image = Image.FromFile(Server.MapPath("~/content/images/noimage.png")))
+            {
+                using (MemoryStream ms1 = new MemoryStream())
+                {
+                    image.Save(ms1, System.Drawing.Imaging.ImageFormat.Png);
+
+                    return File(ms1.ToArray(), "image/png");
+                }
+            }
+        }
+
+        [HttpPost]
+        public ActionResult preDeposit()
+        {
+            // 创建支付订单，状态置为"CREATED"，同时将二维码返回到前端页面。
+
+            return Redirect("/");
+        }
+
+        [HttpPost]
+        public JsonResult submitDeposit()
+        {
+            // 更新支付订单的状态为"SUBMITTED"
+
+            return Json("success", JsonRequestBehavior.AllowGet);
         }
 
         [HttpGet]

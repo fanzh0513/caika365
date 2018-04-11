@@ -1,10 +1,12 @@
-﻿using AosuApp.AosuFramework;
+﻿using AosuApp.AosuData;
+using AosuApp.AosuFramework;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,20 +38,16 @@ namespace API.CP.BASE.Payment
             string orderId = new DictSetUtil(null).PushSLItem(s_id).PushSLItem(u_id).DoSignature();
 
             List<string> aList = new List<string>();
-            aList.Add("p1_mchtid=" + dictParams.GetValue("params.p1_mchtid"));     // 商户ID
-
-            aList.Add("p2_paytype=" + dictParams.GetValue("params.p2_paytype"));    // 支付方式
-            aList.Add("p3_paymoney=" + a_id);   // 支付金额
-            aList.Add("p4_orderno=" + orderId);    // 商户平台唯一订单号
-            aList.Add("p5_callbackurl=" + dictParams.GetValue("params.p5_callbackurl"));   // 商户异步回调通知地址
-            aList.Add("p6_notifyurl=" + dictParams.GetValue("params.p6_notifyurl"));   // 商户同步通知地址
-            aList.Add("p7_version=" + dictParams.GetValue("params.p7_version"));    // 版本号
-            aList.Add("p8_signtype=" + dictParams.GetValue("params.p8_signtype"));   // 签名加密方式
-            aList.Add("p9_attach=");     // 备注信息，上行中attach原样返回
-            aList.Add("p10_appname=");   // 分成标识
-            aList.Add("p11_isshow=");    // 是否显示收银台
-            aList.Add("p12_orderip=");   // 商户的用户下单IP
-            aList.Add("sign=");          // 签名
+            aList.Add("customerid=" + dictParams.GetValue("params.customerid"));   // 商户ID
+            aList.Add("paytype=" + dictParams.GetValue("params.paytype"));         // 支付方式
+            aList.Add("total_fee=" + a_id);         // 支付金额
+            aList.Add("sdorderno=" + orderId);      // 商户平台唯一订单号
+            aList.Add("notifyurl=" + dictParams.GetValue("params.notifyurl")); // 商户异步回调通知地址
+            aList.Add("returnurl=" + dictParams.GetValue("params.returnurl")); // 商户同步通知地址
+            aList.Add("version=" + dictParams.GetValue("params.version")); // 版本号
+            aList.Add("remark=");                                          //备注(可为空)
+            aList.Add("bankcode=");                                        // 网银直连不可为空，其他支付方式可为空
+            aList.Add("sign="+ EncryptMD5(string.Join("&", aList)+"&"+ dictParams.GetValue("paeam.paymentkey")));// 签名
 
             byte[] data = Encoding.UTF8.GetBytes(string.Join("&", aList));
 
@@ -72,9 +70,10 @@ namespace API.CP.BASE.Payment
                         switch (response_data.status)
                         {
                             case 1:
-                                // 创建支付订单，状态置为"未处理"，同时将二维码返回到前端页面。
+                                //PickParam(Params).SetParam(response_data);
 
-                                PickParam(Params).SetParam(response_data);
+                                //PickParam(Params).SetParam(imgstream);
+                                PickParam(Params).SetParam("content-type", "image/png");
                                 break;
                             default:
                                 PickParam(Params).SetError(response_data.msg);
@@ -83,6 +82,19 @@ namespace API.CP.BASE.Payment
                     }
                 }
             }
+        }
+
+        private string EncryptMD5(string source)
+        {
+            byte[] bysource = Encoding.UTF8.GetBytes(source);
+            MD5 md5 = MD5.Create();
+            byte[] result = md5.ComputeHash(bysource);
+            StringBuilder strbuilder = new StringBuilder(40);
+            for (int i = 0; i < result.Length; i++)
+            {
+                strbuilder.Append(result[i].ToString("x2"));//加密结果"x2"结果为32位,"x3"结果为48位,"x4"结果为64位
+            }
+            return strbuilder.ToString();
         }
     }
 }

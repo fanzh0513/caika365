@@ -17,7 +17,7 @@
             <div class="clearfix ">
                 <span class="v">充值金额：</span>
                 <div class="k">
-                    <form id="pro_chongzhi_post" name="pro_chongzhi_post" method="post" action="@Href("~/member/preDeposit")">
+                    <form id="pro_chongzhi_post" name="pro_chongzhi_post" @*method="post" action="@Href("~/member/preDeposit")"*@>
                         <input type="hidden" name="username" id="username" value="@Model.Parameters.Account" />
                         <input type="hidden" name="channel" id="channel" value="qrway" />
                         <input type="hidden" name="payid" id="payid" />

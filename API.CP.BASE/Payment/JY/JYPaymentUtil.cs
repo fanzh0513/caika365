@@ -1,15 +1,11 @@
-﻿using AosuApp.AosuFramework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using AosuApp.AosuData;
+using AosuApp.AosuFramework;
 using System.Collections;
-using System.Net;
+using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
-using System.Xml;
-using System.Security.Cryptography;
-using System.Data;
-using AosuApp.AosuData;
+using System.Net;
+using System.Text;
 
 namespace API.CP.BASE.Payment
 {
@@ -73,15 +69,7 @@ namespace API.CP.BASE.Payment
             // r6_qrcode	    二维码信息	        String	200	二维码信息(QQ，支付宝，微信，银联，百度，京东)	是
             // r7_paytype	    支付方式	        String 	20	支付网关(参见附录说明4.3)	是
             // sign	            签名	            String 	40	MD5签名	是
-
-            //string t = EncryptMD5("p1_mchtid=22225&p2_paytype=WEIXIN&p3_paymoney=0.99&p8_signtype=1&p11_isshow=1&p4_orderno=" + orderId + "&p5_callbackurl=http://localhost:15643/member/usercenter/submitDeposit");
-            ////p1_mchtid=22222&p2_signtype=1&p3_orderno=20171014161133666&p4_version=v2.8e465b1d4cad5ca6201b05cc3ddf041aa
-
-
-            //byte[] data = Encoding.UTF8.GetBytes("p1_mchtid=22225&p2_paytype=WEIXIN&p3_paymoney=0.99&p8_signtype=1&p11_isshow=1&p4_orderno=" +
-            //    ""+ orderId+ "&p5_callbackurl=http://pay.095pay.com/api/order/pay&p7_version=v2.8&sign=" + t);
-
-
+            
             DictSetUtil dictSet = new DictSetUtil(PickParam(Params).ExportDS());
             DictSetUtil dictParams = new DictSetUtil(new DSUtil(dictSet.MyDS).SetFilter(DictSet.TableName, string.Format("{0} LIKE 'params.%'", DictSet.FN_MCCanShu)).ExportDS());
 
@@ -122,35 +110,33 @@ namespace API.CP.BASE.Payment
                 using (StreamReader aStream = new StreamReader(postResponse.GetResponseStream(), Encoding.UTF8))
                 {
                     jy_qr_response response_data = AosuApp.DataToJsonString.Deserialize<jy_qr_response>(aStream.ReadToEnd());
-                    if(response_data != null)
+                    if (response_data != null)
                     {
+                        response_data.data = new jy_qr_response.jy_qr_response_data();
+                        response_data.data.r6_qrcode = "http://www.55tx.cn/img/ewmlogo/1001025.png";
+                        response_data.rspCode = 1;
                         switch (response_data.rspCode)
                         {
                             case 1:
-                                // 创建支付订单，状态置为"未处理"，同时将二维码返回到前端页面。
+                                using (HttpWebResponse response = HttpWebRequest.Create(response_data.data.r6_qrcode).GetResponse() as HttpWebResponse)
+                                {
+                                    using (Image img = new Bitmap(response.GetResponseStream()))
+                                    {
+                                        MemoryStream ms = new MemoryStream();
+                                        img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
 
-                                PickParam(Params).SetParam(response_data.data.r6_qrcode);
+                                        PickParam(Params).SetParam(ms.ToArray());
+                                        PickParam(Params).SetParam("content-type", "image/png");
+                                    }
+                                }
                                 break;
                             default:
                                 PickParam(Params).SetError(response_data.rspMsg);
                                 break;
-                        }
+                        }                       
                     }
                 }
             }
-        }
-
-        private string EncryptMD5(string source)
-        {
-            byte[] bysource = Encoding.UTF8.GetBytes(source);
-            MD5 md5 = MD5.Create();
-            byte[] result = md5.ComputeHash(bysource);
-            StringBuilder strbuilder = new StringBuilder(40);
-            for (int i = 0; i < result.Length; i++)
-            {
-                strbuilder.Append(result[i].ToString("x2"));//加密结果"x2"结果为32位,"x3"结果为48位,"x4"结果为64位
-            }
-            return strbuilder.ToString();
         }
 
         private void QR4ALiPay(Hashtable Params)
