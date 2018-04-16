@@ -133,7 +133,8 @@ namespace API.CP.BASE.Payment
                             default:
                                 PickParam(Params).SetError(response_data.rspMsg);
                                 break;
-                        }                       
+                        }
+
                     }
                 }
             }
