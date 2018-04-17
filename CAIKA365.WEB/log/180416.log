@@ -313,3 +313,212 @@
 [18/04/16 17:16:17 043][TRACE][PID:9328]AosuApp.AosuFramework.ADataLoader:CLoadData
 [18/04/16 17:16:17 060][TRACE][PID:9328]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
 [18/04/16 17:16:17 109][TRACE][PID:9328]API.CP.BASE.Payment.TXFPaymentUtil:CGetQRImage
+[18/04/16 17:41:11 494][INFO ][PID:15348]开始!
+[18/04/16 17:41:11 532][INFO ][PID:15348]启动路径：E:\workspace\CAIKA365\CAIKA365.WEB\
+[18/04/16 17:41:11 571][INFO ][PID:15348]配置路径：E:\workspace\CAIKA365\CAIKA365.WEB\/Data/AosuConfig.xml
+[18/04/16 17:41:11 494][INFO ][PID:15348]开始!
+[18/04/16 17:41:11 574][INFO ][PID:15348]启动路径：E:\workspace\CAIKA365\CAIKA365.WEB\
+[18/04/16 17:41:11 575][INFO ][PID:15348]配置路径：E:\workspace\CAIKA365\CAIKA365.WEB\/Data/AosuConfig.xml
+[18/04/16 17:41:11 578][TRACE][PID:15348]AosuApp.AosuFramework.AWSDataUtil:CLoadData
+[18/04/16 17:41:11 578][TRACE][PID:15348]AosuApp.AosuFramework.AWSDataUtil:CLoadData
+[18/04/16 17:41:11 700][TRACE][PID:15348]AosuApp.AosuFramework.AWSUtil:CServerState
+[18/04/16 17:41:11 705][TRACE][PID:15348]AosuApp.AosuFramework.AWSUtil:CServerState
+[18/04/16 17:41:11 738][TRACE][PID:15348]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/16 17:41:11 744][TRACE][PID:15348]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/16 17:41:11 768][ERROR][PID:15348]AosuApp.Web.WSHandler.xml不存在!
+[18/04/16 17:41:11 774][ERROR][PID:15348]AosuApp.Web.WSHandler.xml不存在!
+[18/04/16 17:41:12 030][TRACE][PID:15348]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/16 17:41:12 084][TRACE][PID:15348]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/16 17:41:38 244][TRACE][PID:15348]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:41:38 255][TRACE][PID:15348]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:41:38 479][TRACE][PID:15348]AosuApp.AosuSSO.APassport:CSignOn
+[18/04/16 17:41:38 486][TRACE][PID:15348]AosuApp.AosuSSO.ADomain:CCheckLicense
+[18/04/16 17:41:38 488][TRACE][PID:15348]AosuApp.AosuSSO.ADomain:CGetADomainDS
+[18/04/16 17:41:38 491][TRACE][PID:15348]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:41:38 494][TRACE][PID:15348]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:41:38 510][TRACE][PID:15348]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:41:38 511][TRACE][PID:15348]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:41:38 521][TRACE][PID:15348]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:41:38 522][TRACE][PID:15348]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:41:38 544][TRACE][PID:15348]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:41:38 552][TRACE][PID:15348]AosuApp.AosuSSO.APassport:CVerifyPasswrod
+[18/04/16 17:41:38 561][TRACE][PID:15348]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:41:38 586][TRACE][PID:15348]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:41:38 593][TRACE][PID:15348]AosuApp.AosuFramework.ADataLoader:CPersistent
+[18/04/16 17:41:38 601][TRACE][PID:15348]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:41:38 632][TRACE][PID:15348]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:41:38 634][TRACE][PID:15348]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:41:38 638][TRACE][PID:15348]AosuApp.AosuFramework.ADataLoader:CPersistent
+[18/04/16 17:41:38 639][TRACE][PID:15348]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:41:38 713][TRACE][PID:15348]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:41:38 714][TRACE][PID:15348]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:41:38 719][TRACE][PID:15348]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:41:38 720][TRACE][PID:15348]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:41:38 725][TRACE][PID:15348]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/16 17:41:38 783][TRACE][PID:15348]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:41:38 785][TRACE][PID:15348]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:41:40 717][TRACE][PID:15348]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:41:40 746][TRACE][PID:15348]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:41:40 794][TRACE][PID:15348]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:41:40 810][TRACE][PID:15348]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:41:41 283][TRACE][PID:15348]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:41:41 307][TRACE][PID:15348]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:42:01 399][TRACE][PID:15348]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:42:01 401][TRACE][PID:15348]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:42:01 406][TRACE][PID:15348]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:42:01 407][TRACE][PID:15348]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:42:01 430][TRACE][PID:15348]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:42:01 431][TRACE][PID:15348]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:42:01 435][TRACE][PID:15348]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:42:01 436][TRACE][PID:15348]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:42:01 442][TRACE][PID:15348]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:42:01 444][TRACE][PID:15348]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:42:01 469][TRACE][PID:15348]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:42:01 471][TRACE][PID:15348]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:42:01 504][TRACE][PID:15348]API.CP.BASE.Payment.TXFPaymentUtil:CGetQRImage
+[18/04/16 17:50:23 569][INFO ][PID:10980]开始!
+[18/04/16 17:50:23 586][INFO ][PID:10980]启动路径：E:\workspace\CAIKA365\CAIKA365.WEB\
+[18/04/16 17:50:23 587][INFO ][PID:10980]配置路径：E:\workspace\CAIKA365\CAIKA365.WEB\/Data/AosuConfig.xml
+[18/04/16 17:50:23 591][TRACE][PID:10980]AosuApp.AosuFramework.AWSDataUtil:CLoadData
+[18/04/16 17:50:23 610][TRACE][PID:10980]AosuApp.AosuFramework.AWSUtil:CServerState
+[18/04/16 17:50:23 639][TRACE][PID:10980]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/16 17:50:23 641][ERROR][PID:10980]AosuApp.Web.WSHandler.xml不存在!
+[18/04/16 17:50:23 829][TRACE][PID:10980]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/16 17:51:18 383][TRACE][PID:10980]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/16 17:51:32 611][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:51:32 620][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:32 725][TRACE][PID:10980]AosuApp.AosuSSO.APassport:CSignOn
+[18/04/16 17:51:32 737][TRACE][PID:10980]AosuApp.AosuSSO.ADomain:CCheckLicense
+[18/04/16 17:51:32 776][TRACE][PID:10980]AosuApp.AosuSSO.ADomain:CGetADomainDS
+[18/04/16 17:51:32 782][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:51:32 785][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:32 801][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:51:32 803][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:32 813][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:51:32 814][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:32 823][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:32 828][TRACE][PID:10980]AosuApp.AosuSSO.APassport:CVerifyPasswrod
+[18/04/16 17:51:32 830][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:51:32 831][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:32 835][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CPersistent
+[18/04/16 17:51:32 847][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:32 873][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:51:32 874][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:32 878][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CPersistent
+[18/04/16 17:51:32 879][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:32 920][TRACE][PID:10980]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/16 17:51:33 090][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:51:33 105][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:33 134][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:51:33 200][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:35 391][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:51:35 437][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:35 447][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:51:35 449][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:35 485][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:51:35 524][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:35 527][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:51:35 528][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:35 533][TRACE][PID:10980]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/16 17:51:35 588][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:51:35 589][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:36 614][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:51:36 615][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:36 619][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:51:36 621][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:36 663][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:51:36 668][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:38 652][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:51:38 677][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:38 681][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:51:38 697][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:38 746][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:51:38 762][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:38 770][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:51:38 819][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:38 829][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:51:38 832][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:38 838][TRACE][PID:10980]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 17:51:38 849][TRACE][PID:10980]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 17:51:38 863][TRACE][PID:10980]API.CP.BASE.Payment.TXFPaymentUtil:CGetQRImage
+[18/04/16 18:11:28 135][INFO ][PID:7568]开始!
+[18/04/16 18:11:28 265][INFO ][PID:7568]启动路径：E:\workspace\CAIKA365\CAIKA365.WEB\
+[18/04/16 18:11:28 266][INFO ][PID:7568]配置路径：E:\workspace\CAIKA365\CAIKA365.WEB\/Data/AosuConfig.xml
+[18/04/16 18:11:28 270][TRACE][PID:7568]AosuApp.AosuFramework.AWSDataUtil:CLoadData
+[18/04/16 18:11:28 135][INFO ][PID:7568]开始!
+[18/04/16 18:11:29 015][INFO ][PID:7568]启动路径：E:\workspace\CAIKA365\CAIKA365.WEB\
+[18/04/16 18:11:28 135][INFO ][PID:7568]开始!
+[18/04/16 18:11:29 092][INFO ][PID:7568]启动路径：E:\workspace\CAIKA365\CAIKA365.WEB\
+[18/04/16 18:11:29 093][INFO ][PID:7568]配置路径：E:\workspace\CAIKA365\CAIKA365.WEB\/Data/AosuConfig.xml
+[18/04/16 18:11:29 145][INFO ][PID:7568]配置路径：E:\workspace\CAIKA365\CAIKA365.WEB\/Data/AosuConfig.xml
+[18/04/16 18:11:28 136][INFO ][PID:7568]开始!
+[18/04/16 18:11:29 145][INFO ][PID:7568]启动路径：E:\workspace\CAIKA365\CAIKA365.WEB\
+[18/04/16 18:11:29 191][TRACE][PID:7568]AosuApp.AosuFramework.AWSDataUtil:CLoadData
+[18/04/16 18:11:29 191][TRACE][PID:7568]AosuApp.AosuFramework.AWSDataUtil:CLoadData
+[18/04/16 18:11:29 192][INFO ][PID:7568]配置路径：E:\workspace\CAIKA365\CAIKA365.WEB\/Data/AosuConfig.xml
+[18/04/16 18:11:29 247][TRACE][PID:7568]AosuApp.AosuFramework.AWSDataUtil:CLoadData
+[18/04/16 18:11:29 791][TRACE][PID:7568]AosuApp.AosuFramework.AWSUtil:CServerState
+[18/04/16 18:11:29 793][TRACE][PID:7568]AosuApp.AosuFramework.AWSUtil:CServerState
+[18/04/16 18:11:29 799][TRACE][PID:7568]AosuApp.AosuFramework.AWSUtil:CServerState
+[18/04/16 18:11:29 802][TRACE][PID:7568]AosuApp.AosuFramework.AWSUtil:CServerState
+[18/04/16 18:11:30 067][TRACE][PID:7568]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/16 18:11:30 068][TRACE][PID:7568]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/16 18:11:30 069][TRACE][PID:7568]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/16 18:11:30 071][TRACE][PID:7568]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/16 18:11:30 075][ERROR][PID:7568]AosuApp.Web.WSHandler.xml不存在!
+[18/04/16 18:11:30 075][ERROR][PID:7568]AosuApp.Web.WSHandler.xml不存在!
+[18/04/16 18:11:30 079][ERROR][PID:7568]AosuApp.Web.WSHandler.xml不存在!
+[18/04/16 18:11:30 083][ERROR][PID:7568]AosuApp.Web.WSHandler.xml不存在!
+[18/04/16 18:11:31 045][TRACE][PID:7568]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/16 18:12:47 654][TRACE][PID:7568]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/16 18:13:10 294][TRACE][PID:7568]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 18:13:10 322][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:10 657][TRACE][PID:7568]AosuApp.AosuSSO.APassport:CSignOn
+[18/04/16 18:13:10 661][TRACE][PID:7568]AosuApp.AosuSSO.ADomain:CCheckLicense
+[18/04/16 18:13:10 663][TRACE][PID:7568]AosuApp.AosuSSO.ADomain:CGetADomainDS
+[18/04/16 18:13:10 665][TRACE][PID:7568]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 18:13:10 666][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:10 693][TRACE][PID:7568]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 18:13:10 694][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:10 725][TRACE][PID:7568]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 18:13:10 726][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:10 735][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:10 765][TRACE][PID:7568]AosuApp.AosuSSO.APassport:CVerifyPasswrod
+[18/04/16 18:13:10 767][TRACE][PID:7568]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 18:13:10 769][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:10 772][TRACE][PID:7568]AosuApp.AosuFramework.ADataLoader:CPersistent
+[18/04/16 18:13:10 777][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:10 845][TRACE][PID:7568]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 18:13:10 846][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:10 849][TRACE][PID:7568]AosuApp.AosuFramework.ADataLoader:CPersistent
+[18/04/16 18:13:10 850][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:11 248][TRACE][PID:7568]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 18:13:11 250][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:11 254][TRACE][PID:7568]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 18:13:11 255][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:11 259][TRACE][PID:7568]AosuApp.AosuFramework.ALocalDataLoader:CLoadData
+[18/04/16 18:13:11 465][TRACE][PID:7568]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 18:13:11 466][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:13 364][TRACE][PID:7568]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 18:13:13 371][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:13 374][TRACE][PID:7568]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 18:13:13 375][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:13 574][TRACE][PID:7568]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 18:13:13 598][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:13 646][TRACE][PID:7568]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 18:13:13 682][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:14 085][TRACE][PID:7568]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 18:13:14 087][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:15 475][TRACE][PID:7568]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 18:13:15 476][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:15 480][TRACE][PID:7568]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 18:13:15 481][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:15 510][TRACE][PID:7568]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 18:13:15 512][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:15 515][TRACE][PID:7568]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 18:13:15 515][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:15 521][TRACE][PID:7568]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 18:13:15 523][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:15 530][TRACE][PID:7568]AosuApp.AosuFramework.ADataLoader:CLoadData
+[18/04/16 18:13:15 532][TRACE][PID:7568]AosuApp.AosuFramework.ADataSourceUtil:CGetConnection
+[18/04/16 18:13:15 549][TRACE][PID:7568]API.CP.BASE.Payment.TXFPaymentUtil:CGetQRImage
